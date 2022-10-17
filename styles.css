@@ -1,0 +1,559 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  max-height: 5700px;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  background-image: linear-gradient(rgba(17, 32, 82, 0.795), rgba(25, 64, 90, 0.795), rgba(168, 197, 216, 0.795), rgba(166, 195, 214, 0.795), rgba(58, 176, 255, 0.795), rgba(72, 128, 165, 0.795), rgb(0, 0, 0));
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  width: 100vw;
+  height: 5700px;
+  max-height: 5700px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.hero {
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.6);
+  min-height: 70px;
+  height: 12vh;
+  color: #fff;
+  display: flex;
+}
+
+.nav {
+  --state-close: scale(0);
+  --state-hamburguer:scale(1);
+  --state-menu: translate(-100%);
+  padding: 0px 0;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: repeat(2, -webkit-max-content);
+  grid-template-columns: repeat(2, max-content);
+}
+
+.nav:target {
+  --state-menu: translate(0);
+  --state-close: scale(1);
+  --state-hamburguer:scale(0);
+}
+
+.nav__logo {
+  font-size: 4rem;
+  font-family: "Courier New", Courier, monospace;
+  z-index: 1;
+}
+
+.nav__hamburguer,
+.nav__close {
+  z-index: 100;
+  cursor: pointer;
+  grid-column: -2/-1;
+  grid-row: 1/2;
+  transition: 0.4s transform;
+}
+
+.nav__hamburguer {
+  transform: var(--state-hamburguer);
+}
+
+.nav__close {
+  transform: var(--state-close);
+}
+
+.nav__icon {
+  width: 40px;
+}
+
+.nav__links {
+  z-index: 50;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  display: grid;
+  align-content: center;
+  gap: 2em;
+  padding-left: 5%;
+  transform: var(--state-menu);
+  transition: 0.3s transform;
+}
+
+.nav__item {
+  list-style: none;
+}
+
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.pfp {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background: url("https://images-ext-1.discordapp.net/external/5g5r9OMx4afRL0zp_ditMN9ENUJMWGXV71WkshGTQgY/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/618633182241357834/e47cc08310acac81e056d3c7daabb741.png?width=676&height=676");
+  background-size: cover;
+  margin-top: 30px;
+}
+
+.typing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 50px;
+  border: 2px solid rgb(141, 141, 141);
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  max-width: 700px;
+}
+
+.typing-container h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 3rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.typing-container p {
+  font-family: "Courier New", Courier, monospace;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+.typing-container h1 span.typed-text {
+  font-weight: normal;
+  color: #dd7732;
+}
+
+.typing-container h1 span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  -webkit-animation: blink 1s infinite;
+          animation: blink 1s infinite;
+}
+
+.typing-container h1 span.cursor.typing {
+  -webkit-animation: none;
+          animation: none;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+  49% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #ccc;
+  }
+}
+
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+  49% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #ccc;
+  }
+}
+.bio {
+  width: 100%;
+  height: 800px;
+  background: center url("./img/stars.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-size: contain;
+}
+
+.myinfo {
+  width: 100%;
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-size: contain;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.myinfo .text-container {
+  width: 70%;
+  max-width: 500px;
+  min-width: 350px;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px;
+  border: 4px solid rgb(141, 141, 141);
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  max-width: 700px;
+}
+.myinfo .text-container h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 4rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  overflow: hidden;
+  color: #dd7732;
+}
+.myinfo .text-container p {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  text-align: left;
+  font-size: 2rem;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+.myinfo .text-container a:link {
+  text-decoration: none;
+  color: rgb(172, 224, 255);
+  transition: all 0.5s;
+  text-align: left;
+}
+.myinfo .text-container a:visited {
+  text-decoration: none;
+  color: rgb(172, 224, 255);
+  transition: all 0.5s;
+  text-align: left;
+}
+.myinfo .text-container a:link:hover {
+  text-decoration: none;
+  color: rgb(19, 35, 44);
+  font-size: large;
+  transition: all 0.5s;
+  text-align: center;
+}
+
+.redes {
+  z-index: 100;
+  margin-top: 100px;
+  width: 100%;
+  height: 1500px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.redes .redes-container {
+  z-index: 2;
+  width: 100%;
+  height: 1500px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  align-items: center;
+  justify-content: space-evenly;
+  background-image: center url("./img/niebla.png");
+  background-size: contain;
+}
+.redes .redes-container .titulo {
+  font-size: 4rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.redes .redes-container .discord {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  min-height: 250px;
+  max-height: 350px;
+  background-color: rgba(0, 0, 0, 0.301);
+  border-radius: 10px;
+  padding: 20px;
+  justify-content: space-evenly;
+  gap: 0px;
+  transition: all 0.5s;
+}
+.redes .redes-container .discord .icono {
+  width: 16vw;
+  height: 16vw;
+  background: center no-repeat url("./img/discordlogo.png");
+  background-size: cover;
+}
+.redes .redes-container .discord .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2vw;
+  gap: 10px;
+}
+.redes .redes-container .discord .info .profile {
+  width: 50vw;
+  max-width: 500px;
+  height: 20vw;
+  max-height: 250px;
+  background: center no-repeat url("./img/presence.png");
+  background-size: contain;
+}
+.redes .redes-container .discord:hover {
+  border-radius: 25%;
+  transition: all 0.5s;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.redes .redes-container .instagram:hover {
+  border-radius: 25%;
+  transition: all 0.5s;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.redes .redes-container .twitter:hover {
+  border-radius: 25%;
+  transition: all 0.5s;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.redes .redes-container .instagram {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 90%;
+  min-height: 250px;
+  max-height: 350px;
+  background-color: rgba(0, 0, 0, 0.301);
+  border-radius: 10px;
+  padding: 20px;
+  justify-content: space-evenly;
+  gap: 0px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.redes .redes-container .instagram .icono {
+  width: 16vw;
+  height: 16vw;
+  background: center no-repeat url("./img/instagram.png");
+  background-size: cover;
+}
+.redes .redes-container .instagram .info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 3vw;
+  gap: 10px;
+}
+.redes .redes-container .twitter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 90%;
+  min-height: 250px;
+  max-height: 350px;
+  background-color: rgba(0, 0, 0, 0.301);
+  border-radius: 10px;
+  padding: 20px;
+  justify-content: space-evenly;
+  gap: 0px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.redes .redes-container .twitter .icono {
+  width: 16vw;
+  height: 16vw;
+  background: center no-repeat url("./img/twitter.png");
+  background-size: cover;
+}
+.redes .redes-container .twitter .info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 3vw;
+  gap: 10px;
+}
+
+.balloons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 0;
+  margin-top: 500px;
+  width: 90%;
+  overflow: visible;
+  margin-left: -200px;
+}
+.balloons .container {
+  width: 50%;
+  height: 150%;
+  overflow: visible;
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: repeat(6, -webkit-max-content);
+  grid-template-columns: repeat(6, max-content);
+  grid-column: auto;
+}
+.balloons .container .balloon1 {
+  width: 300px;
+  height: 500px;
+  background: center no-repeat url("./img/balloon.gif");
+  background-size: cover;
+}
+.balloons .container .balloon2 {
+  margin-top: 10vw;
+  width: 300px;
+  height: 200px;
+  background: center no-repeat url("./img/balloon2.gif");
+  background-size: contain;
+}
+
+.clouds {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 0;
+  margin-top: 500px;
+  width: 90%;
+  overflow: visible;
+  margin-left: -200px;
+}
+.clouds .container {
+  width: 50%;
+  height: 150%;
+  overflow: visible;
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: repeat(7, -webkit-max-content);
+  grid-template-columns: repeat(7, max-content);
+  grid-column: auto;
+}
+.clouds .container .cloud1 {
+  width: 300px;
+  height: 150px;
+  background: center no-repeat url("./img/cloud1.png");
+  background-size: cover;
+}
+.clouds .container .cloud2 {
+  margin-top: 10vw;
+  width: 500px;
+  height: 350px;
+  background: center no-repeat url("./img/cloud1.png");
+  background-size: contain;
+}
+
+[data-scroll] {
+  transition: opacity 1.5s;
+}
+
+[data-scroll=in] {
+  opacity: 1;
+}
+
+[data-scroll=out] {
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+  .typing-container h1 {
+    font-size: 2rem;
+  }
+  .typing-container p {
+    font-size: 10px;
+  }
+  .typing-container {
+    margin-top: -150px;
+  }
+}
+@media (min-width: 768px) {
+  .nav {
+    --state-hamburguer:scale(0);
+    --state-menu: translate(0);
+  }
+  .nav:target {
+    --state-close: scale(0);
+  }
+  .nav__links {
+    padding: 0;
+    background-color: unset;
+    position: unset;
+    gap: 1.5em;
+    grid-auto-flow: column;
+    transform: unset;
+    grid-column: -2/-1;
+    grid-row: 1/2;
+  }
+  .nav__link {
+    font-size: 1rem;
+    letter-spacing: none;
+  }
+  .titulo {
+    font-size: 100px;
+  }
+}/*# sourceMappingURL=index.css.map */
