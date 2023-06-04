@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11/dist/gsap.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page</title>
+    <title>A</title>
 </head>
 <body>
     
+  <div class="bgblur"></div>
 
- <header class="hero" id="start">
+    <section class="navegador">
     <nav class="nav container" id="nav">
-        <h2 class="nav__logo">C</h2>
+        <h2 class="nav__logo" id="top">C</h2>
     
         <ul class="nav__links">
     
             <li class="nav__item">
-                <a href="#start" class="nav__link">Inicio</a>
-            </li>
-            <li class="nav__item">
-                <a href="#redes" class="nav__link">Redes</a>
-            </li>
-            <li class="nav__item">
-                <a href="#myinfo" class="nav__link">More info</a>
+                <a href="#projects" class="nav__link">Projects</a>
             </li>
         
         </ul>
@@ -40,292 +37,236 @@
         </a>
     
     </nav>
- </header>
+</section>
 
 
-<section class="bio rellax" data-rellax-speed="-10" data-scroll="in">
-    <div class="typing-container">
-        <div class="pfp">
-        </div>
-        
-            <h1>Hi! I'm <span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
-            <p><br>
-               Introducing CrisKop, is a 16 year old boy who likes programming, rythm games, and much more.<br><br>
-                Since like i had nine years i started liking some things related to software, two years later, i started coding my first program, having me now with a lot of knowledge since then
-            </p>
+
+<section class="bgxd">
+    <div class="circles">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    </div>
+</section>
+
+
+
+<section class="seccion1">
+
+
+    <section class="bio">
+        <div id="bio" class="hidden float typing-container">
+            <div class="pfp">
+            </div>
+            
+                <h1>Hi! I'm <span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
+                <p><br>
+                   Introducing CrisKop, is a 16 year old boy who likes programming, rythm games, and much more.<br><br>
+                    Since like i had nine years i started liking some things related to software, two years later, i started coding my first program, having me now with a lot of knowledge since then
+                </p>
+              </div>
+            
+              <script>
+                const typedTextSpan = document.querySelector(".typed-text");
+            const cursorSpan = document.querySelector(".cursor");
+            
+            const textArray = ["CrisKop"];
+            const typingDelay = 200;
+            const erasingDelay = 100;
+            const newTextDelay = 2000; // Delay between current and next text
+            let textArrayIndex = 0;
+            let charIndex = 0;
+            
+            function type() {
+              if (charIndex < textArray[textArrayIndex].length) {
+                if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+                typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, typingDelay);
+              } 
+              else {
+                cursorSpan.classList.remove("typing");
+                  setTimeout(erase, newTextDelay);
+              }
+            }
+            
+            function erase() {
+                if (charIndex > 0) {
+                if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+                typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+                charIndex--;
+                setTimeout(erase, erasingDelay);
+              } 
+              else {
+                cursorSpan.classList.remove("typing");
+                textArrayIndex++;
+                if(textArrayIndex>=textArray.length) textArrayIndex=0;
+                setTimeout(type, typingDelay + 1100);
+              }
+            }
+            
+            document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+              if(textArray.length) setTimeout(type, newTextDelay + 250);
+            });</script> <!--TYPING EFFECT-->
+    </section>
+
+    <section id="redes" class="redes">
+      <div id="yt" class="yt panel float hidden" onclick="window.open('https://www.youtube.com/criskopv/','mywindow')">
+        <div class="ytlogo"></div>
+        <div class="name"><a>@CrisKopv</a></div>
+      </div>
+
+      <div id="dc" onmouseout="outFunc()" onclick="copydc()" class="tooltip dc panel float hidden">
+        <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+        <div class="dclogo"></div>
+        <div class="name"><a>CrisElKopo#6731</a></div>
+      </div>
+
+      <div id="ig" class="ig panel float hidden" onclick="window.open('https://www.instagram.com/gold_cris__/','mywindow')">
+        <div class="iglogo"></div>
+        <div class="name"><a>@gold_cris__</a></div>
+      </div>
+
+      <div id="tw" class="tw panel float hidden" onclick="window.open('https://twitter.com/KopCris','mywindow')">
+        <div class="twlogo"></div>
+        <div class="name"><a>@KopCris</a></div>
+      </div>
+    </section>
+
+    <a href="#projects">
+    <section class="flechas">
+    <p id="f0" class="float hidden">GO DOWN</p>
+    <img id="f1" class="float hidden" src="./arrowdown.svg"></svg>
+    <img id="f2" class="float hidden" src="./arrowdown.svg"></svg>
+    <img id="f3" class="float hidden" src="./arrowdown.svg"></svg>
+    </section>
+  </a>
+
+  </section><!--Fin seccion 1-->
+
+  <section id="projects" class="seccion seccion2">
+
+    <section class="parts">
+
+      <div class="part1">
+        <h1 class="main-title">Mi libro</h1>
+        <div class="containerbook">
+          <div class="book">
+            <div class="front">
+              <div class="cover">
+                      
+              </div>
+            </div>
+            <div class="left-side">
+              <h2>
+                <span>Cristian Prince</span>
+                <span>2023</span>
+              </h2>
+            </div>
+
+            <div class="back">
+              <div class="cover2">
+                      
+              </div>
+            </div>
           </div>
-        
-          <script>
-            const typedTextSpan = document.querySelector(".typed-text");
-        const cursorSpan = document.querySelector(".cursor");
-        
-        const textArray = ["CrisKop", "a developer!", "a web developer!"];
-        const typingDelay = 200;
-        const erasingDelay = 100;
-        const newTextDelay = 2000; // Delay between current and next text
-        let textArrayIndex = 0;
-        let charIndex = 0;
-        
-        function type() {
-          if (charIndex < textArray[textArrayIndex].length) {
-            if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-            typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-            charIndex++;
-            setTimeout(type, typingDelay);
-          } 
-          else {
-            cursorSpan.classList.remove("typing");
-              setTimeout(erase, newTextDelay);
-          }
-        }
-        
-        function erase() {
-            if (charIndex > 0) {
-            if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-            typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
-            charIndex--;
-            setTimeout(erase, erasingDelay);
-          } 
-          else {
-            cursorSpan.classList.remove("typing");
-            textArrayIndex++;
-            if(textArrayIndex>=textArray.length) textArrayIndex=0;
-            setTimeout(type, typingDelay + 1100);
-          }
-        }
-        
-        document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-          if(textArray.length) setTimeout(type, newTextDelay + 250);
-        });
-          </script>
-</section>
-
-<section class="redes rellax" id="redes" data-rellax-speed="-11">
-    <div class="redes-container">
-        <div class="titulo">
-            <h1>Redes</h1>
         </div>
-        
-        
-        <div class="discord">
-        
-        <div class="icono"></div>
-        <div class="info">
-            Es la red social que mas uso, acá tienes mi perfil.
-        <div class="profile"></div>
-        
+
+        <div class="buttons">
+          <button onclick="window.open('https://quesodash.fun/', '_blank')" type="button">Leer fragmento</button>
+          <button class="compra" onclick="window.open('https://discord.gg/ET4NYW6VHS', '_blank')" type="button">Comprar!</button>
         </div>
-        
-        </div>
-        
-        <!--FIn discord-->
-        
-        <div class="instagram" onclick="window.open('https://www.instagram.com/criskop__/','mywindow')">
-        
-            <div class="icono"></div>
-            <div class="info">
-            No lo uso pero ahí está:<br><br>criskop__
-            </div>
-            
-            </div>
-        
-        <!--Fin insta-->
-        
-        
-        <div class="twitter" onclick="window.open('https://twitter.com/KopCris','mywindow')">
-        
-            <div class="icono"></div>
-            <div class="info">
-            Tampoco lo uso pero:<br><br>Click para ir
-            </div>
-            
-            </div>
-        
-        
-        </div>
-</section>
-
-
-<section class="balloons rellax" data-rellax-speed="-4">
-    <div class="container">
-        <div class="balloon1"></div>
-        <div class="balloon2"></div>
-        <div class="balloon1"></div>
-        <div class="balloon2"></div>
-        <div class="balloon1"></div>
-        <div class="balloon2"></div>
-    </div>
-    <div style="margin-left:10vw;" class="container rellax" data-rellax-speed="1">
-        <div class="balloon1"></div>
-        <div class="balloon2"></div>
-        <div class="balloon1"></div>
-        <div class="balloon2"></div>
-        <div class="balloon1"></div>
-        <div class="balloon2"></div>
-    </div>
-    <div style="margin-left:0vw;" class="container rellax" data-rellax-speed="5">
-        <div class="balloon1"></div>
-        <div class="balloon2"></div>
-        <div class="balloon1"></div>
-        <div class="balloon2"></div>
-        <div class="balloon1"></div>
-        <div class="balloon2"></div>
-    </div>
-</section>
-
-
-<section class="clouds rellax" data-rellax-speed="2">
-    <div class="container">
-        <div class="rellax cloud1" data-rellax-speed="-2"></div>
-        <div class="rellax cloud2" style="margin-left:1vw;" data-rellax-speed="2"></div>
-    </div>
-    
-    <div class="container" style="margin-left:10vw;">
-        <div class="rellax cloud1" data-rellax-speed="-1"></div>
-        <div class="rellax cloud2" data-rellax-speed="1"></div>
-    </div>
-    
-    <div class="container" style="margin-left:12vw;">
-        <div class="rellax cloud1" data-rellax-speed="0"></div>
-        <div class="rellax cloud2" data-rellax-speed="0"></div>
-    </div>
-    
-    <div class="container" style="margin-left:15vw;">
-        <div class="rellax cloud1" style="margin-left:-5vw;" data-rellax-speed="1"></div>
-        <div class="rellax cloud2" data-rellax-speed="-1"></div>
-    </div>
-    
-    <div class="container">
-        <div class="rellax cloud1" data-rellax-speed="2"></div>
-        <div class="rellax cloud2" data-rellax-speed="-2"></div>
-    </div>
-</section>
-
-
-<section class="clouds rellax" data-rellax-speed="3" data-rellax-percentage="-8">
-    <div class="container">
-        <div class="rellax cloud1" data-rellax-speed="-2"></div>
-        <div class="rellax cloud2" style="margin-left:1vw;" data-rellax-speed="2"></div>
-    </div>
-    
-    <div class="container" style="margin-left:10vw;">
-        <div class="rellax cloud1" data-rellax-speed="-1"></div>
-        <div class="rellax cloud2" data-rellax-speed="1"></div>
-    </div>
-    
-    <div class="container" style="margin-left:12vw;">
-        <div class="rellax cloud1" data-rellax-speed="0"></div>
-        <div class="rellax cloud2" data-rellax-speed="0"></div>
-    </div>
-    
-    <div class="container" style="margin-left:15vw;">
-        <div class="rellax cloud1" style="margin-left:-5vw;" data-rellax-speed="1"></div>
-        <div class="rellax cloud2" data-rellax-speed="-1"></div>
-    </div>
-    
-    <div class="container">
-        <div class="rellax cloud1" data-rellax-speed="2"></div>
-        <div class="rellax cloud2" data-rellax-speed="-2"></div>
-    </div>
-</section>
-
-<section style="margin-left:-15vw; margin-top: -300px;" class="clouds rellax" data-rellax-speed="4">
-    <div class="container">
-        <div class="rellax cloud1" data-rellax-speed="-2"></div>
-        <div class="rellax cloud2" style="margin-left:1vw;" data-rellax-speed="2"></div>
-    </div>
-    
-    <div class="container" style="margin-left:10vw;">
-        <div class="rellax cloud1" data-rellax-speed="-1"></div>
-        <div class="rellax cloud2" data-rellax-speed="1"></div>
-    </div>
-    
-    <div class="container" style="margin-left:12vw;">
-        <div class="rellax cloud1" data-rellax-speed="0"></div>
-        <div class="rellax cloud2" data-rellax-speed="0"></div>
-    </div>
-    
-    <div class="container" style="margin-left:15vw;">
-        <div class="rellax cloud1" style="margin-left:-5vw;" data-rellax-speed="1"></div>
-        <div class="rellax cloud2" data-rellax-speed="-1"></div>
-    </div>
-    
-    <div class="container">
-        <div class="rellax cloud1" data-rellax-speed="2"></div>
-        <div class="rellax cloud2" data-rellax-speed="-2"></div>
-    </div>
-</section>
-
-<section style="margin-left:-20vw; margin-top: -300px;" class="clouds rellax" data-rellax-speed="4">
-    <div class="container">
-        <div class="rellax cloud1" data-rellax-speed="-2"></div>
-        <div class="rellax cloud2" style="margin-left:1vw;" data-rellax-speed="2"></div>
-    </div>
-    
-    <div class="container" style="margin-left:10vw;">
-        <div class="rellax cloud1" data-rellax-speed="-1"></div>
-        <div class="rellax cloud2" data-rellax-speed="1"></div>
-    </div>
-    
-    <div class="container" style="margin-left:12vw;">
-        <div class="rellax cloud1" data-rellax-speed="0"></div>
-        <div class="rellax cloud2" data-rellax-speed="0"></div>
-    </div>
-    
-    <div class="container" style="margin-left:15vw;">
-        <div class="rellax cloud1" style="margin-left:-5vw;" data-rellax-speed="1"></div>
-        <div class="rellax cloud2" data-rellax-speed="-1"></div>
-    </div>
-    
-    <div class="container">
-        <div class="rellax cloud1" data-rellax-speed="2"></div>
-        <div class="rellax cloud2" data-rellax-speed="-2"></div>
-    </div>
-</section>
-
-
-<section class="myinfo rellax" id="myinfo" data-rellax-speed="10">
-    <div class="text-container">
-    
-        <h1>Proyects</h1>
-        <p><br>
-            <a>+ This website</a><br>
-            <a href="https://top.gg/bot/687969316884447260" target="_blank">+ Discord Terretri Bot</a><br>
-            <a href="https://top.gg/bot/687969316884447260" target="_blank">+ Discord Terretri Bot</a>
-        </p>
       </div>
 
-      <div class="text-container">
-    
-        <h1>A bit more of me</h1>
-        <p style="text-align:center;"><br>
-           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi atque commodi unde aliquam amet laborum.
-        </p>
+
+    <div class="part2">
+      <div class="containers">
+        <h2 class="main-title">Queso Dash Page</h2>
+        <div class="content">
+          <div class="image">
+            <img src="qd.png" alt="">
+          </div>
+          <div class="text-box">
+            <h3>QDPage</h3>
+            <p>Pagina personalizada y tematizada en Queso Dash</p>
+          </div>
+        </div>
+        <div class="buttons">
+        <button onclick="window.open('https://quesodash.fun/', '_blank')" type="button">Ir a la página!</button>
+        <button onclick="window.open('https://discord.gg/ET4NYW6VHS', '_blank')" type="button">Queso Dash Discord</button>
       </div>
- </section>
+      </div>
+    </div>
 
- <section class="footer">
-    <footer>
+  
 
-        <p>End.</p>
-          </footer>
- </section>
+    </section>
 
-
-
-
-
-
-
+  </section>
 
 </body>
 </html>
 
-<script>
-    // Accepts any class name
-    var rellax = new Rellax('.rellax', {horizontal: true, vertical: true});
-  </script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-  ScrollOut();
-</script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+    
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+    
+          // Store hash
+          var hash = this.hash;
+    
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 500, function(){
+       
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+    </script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      ScrollReveal({
+        reset: true,
+        distance: '60px',
+        duration: 1500,
+        delay: 0
+      })
+    
+      ScrollReveal().reveal('.seccion', {origin: 'top'})
+    
+      gsap.registerPlugin(ScrollTrigger);
+    
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+      })
+    
+      function raf(time) {
+          lenis.raf(time)
+          requestAnimationFrame(raf)
+      }
+    
+      requestAnimationFrame(raf)
+    
+      
+    </script>
