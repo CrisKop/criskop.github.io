@@ -404,7 +404,7 @@ img {
 .seccion2 .parts {
   height: 100%;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap; /* Evita que los elementos se envuelvan */
   justify-content: center;
   align-items: center;
 }
@@ -490,11 +490,13 @@ img {
 .seccion2 .parts .part2 {
   height: 100%;
   width: 50%;
-  background: rgba(220, 245, 255, 0.5);
+    min-width: 585px;
+  background: rgba(255, 220, 220, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  flex-grow: 1;
 }
 .seccion2 .parts .part2 .containers {
   position: relative;
@@ -553,12 +555,14 @@ img {
 .seccion2 .parts .part1 {
   height: 100%;
   width: 50%;
-  background: rgba(255, 220, 220, 0.5);
+  min-width: 585px;
+  background: rgba(220, 245, 255, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 30px;
+  flex-grow: 1;
 }
 .seccion2 .parts .part1 .containerbook {
   z-index: 1;
