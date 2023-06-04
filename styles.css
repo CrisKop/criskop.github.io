@@ -605,13 +605,13 @@ img {
   height: 550px;
   background-color: rgb(232, 229, 234);
   transform: rotate3d(0, 1, 0, -90deg);
-  background-image: url("bordesito.png");
+  background-image: url("./img/bordesito.png");
   background-size: cover;
 }
 .seccion2 .parts .part1 .containerbook .back {
   transform-style: preserve-3d;
   transform: rotate3d(0, 1, 0, 180deg);
-  background-image: url("contraportada.png"); /* Ruta de la imagen relativa al archivo CSS */
+  background-image: url("./img/contraportada.png"); /* Ruta de la imagen relativa al archivo CSS */
   background-size: cover;
 }
 .seccion2 .parts .part1 .containerbook .back > div {
@@ -641,7 +641,7 @@ img {
 }
 .seccion2 .parts .part1 .cover {
   background: linear-gradient(45deg, #DAD5DC 0%, #f2ebf4 100%);
-  background-image: url("viunacascadabrillante.png");
+  background-image: url("./img/viunacascadabrillante.png");
   background-size: cover;
 }
 .seccion2 .parts .part1 .left-side h2 span:first-child {
