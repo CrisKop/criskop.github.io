@@ -454,6 +454,7 @@ img {
   border-radius: 20px;
   font-size: 2rem;
   border: 1px solid #111222;
+  width: 90vw;
 }
 
 .seccion2 .parts .buttons button:hover {
