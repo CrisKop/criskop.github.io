@@ -1011,11 +1011,23 @@ a{
   @media (max-height: 800px) {
     .bookfrag{
       scale: 0.8;
-      margin-top: 20px;
+      margin-top: 0px;
+    }
+
+    .instruction{
+      display: none;
     }
 
     .frag{
+      margin-top: 80px;
       height: 50%;
+    }
+
+    .buttonspop{
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .popup-content{
