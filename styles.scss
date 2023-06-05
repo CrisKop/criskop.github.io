@@ -993,3 +993,9 @@ a{
         
         }
   }
+
+  @media (max-width: 550px){
+    .book{
+      scale: 0.8;
+    }
+  }

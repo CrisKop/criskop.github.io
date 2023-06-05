@@ -1043,4 +1043,9 @@ a.link:after {
   .open {
     display: none;
   }
+}
+@media (max-width: 550px) {
+  .book {
+    scale: 0.8;
+  }
 }/*# sourceMappingURL=styles.css.map */
