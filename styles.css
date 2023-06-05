@@ -998,7 +998,6 @@ a.link:after {
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
-  padding: 50px;
   background-color: rgba(255, 255, 255, 0.3);
   color: white;
   gap: 30px;
@@ -1051,5 +1050,17 @@ a.link:after {
 @media (max-width: 550px) {
   .book {
     scale: 0.8;
+  }
+}
+@media (max-height: 800px) {
+  .bookfrag {
+    scale: 0.8;
+    margin-top: 20px;
+  }
+  .frag {
+    height: 50%;
+  }
+  .popup-content {
+    top: 100px;
   }
 }/*# sourceMappingURL=styles.css.map */
