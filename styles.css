@@ -12,6 +12,7 @@
   --yt-display: none;
   --dc-display: none;
   --ig-display: none;
+  --font: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 * {
@@ -418,6 +419,7 @@ img {
 }
 
 .seccion2 {
+  font-family: var(--font);
   height: -moz-fit-content;
   height: fit-content;
   min-height: 100vh;
@@ -425,6 +427,7 @@ img {
 }
 
 .seccion2 .parts {
+  font-family: var(--font);
   height: 100%;
   display: flex;
   flex-wrap: wrap; /* Evita que los elementos se envuelvan */
@@ -446,6 +449,7 @@ img {
 
 .seccion2 .parts .buttons button {
   padding: 20px;
+  font-family: var(--font);
   flex-grow: 1;
   text-align: center;
   height: 70px;
@@ -552,6 +556,7 @@ img {
   font-size: 4em;
   margin-bottom: 20px;
   max-width: 100vw;
+  font-family: var(--font);
 }
 
 .seccion2 .parts .part2 .containers .content {
@@ -603,6 +608,7 @@ img {
 }
 
 .seccion2 .parts .part1 {
+  font-family: var(--font);
   height: 100%;
   width: 50%;
   min-width: 585px;
