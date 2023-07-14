@@ -406,14 +406,11 @@ img {
 
 .seccion2 {
   font-family: var(--font);
-  height: -moz-fit-content;
-  height: fit-content;
-  min-height: 100vh;
+  min-height: 100%;
   box-shadow: 0 -50px 50px 2px rgba(255, 255, 255, 0.6);
 }
 .seccion2 .parts {
   font-family: var(--font);
-  height: 100%;
   display: flex;
   flex-wrap: wrap; /* Evita que los elementos se envuelvan */
   justify-content: center;
@@ -558,6 +555,7 @@ img {
   top: 0;
   left:+50px;
   width: 100%;
+  max-width: 436px !important;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1006,8 +1004,151 @@ a{
     border: 0px;
   }
 
+  .movilviewc{
+    position: fixed;
+      top: +1%;
+      right: +1%;
+      width: 25%;
+      height: 15%;
+      max-width: 120px;
+      max-height: 100px;
+      border: 0px;
+      padding: 10px;
+      font-size: 30px;
+      margin: 10px;
+      width: fit-content;
+      height: 50px;
+      border-radius: 10px;
+      border: 2px solid black;
+      background: rgba(255, 255, 255, 0.3);
+      &:hover{
+          background-color: black;
+          color: white;
+      }
+    }
+
+
+  .prevmovil{
+    z-index: 900;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #faf2e2;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: none;
+ 
+  }
+
+  .dontshow{
+    display: none;
+  }
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+
+$text-font: 'EB Garamond', serif;
+$h1-font: 'Lora', serif;
+$h2-font: 'EB Garamond', serif;
+
+.buttonspop{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.instruction{
+  height: fit-content;
+  color: black !important;
+  max-width: 200px;
+
+}
+
+.moresize{
+  padding: 40px !important;
+}
+
+.portada {
+  text-align: center;
+  background: url('./img/viunacascadabrillante.png');
+  background-size: contain;
+  background-repeat:no-repeat;
+
+}
+.contraportada {
+  background: url('./img/contraportada.png');
+  background-size: contain;
+  background-repeat:no-repeat;
+}
+  .pagina{
+
+    border-top: 2px solid rgb(226, 205, 173);
+    max-width: 400px;
+    width: 100vw;
+    min-height: 600px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    div{
+      align-self: center;
+      margin-bottom: 4%;
+      font-family: $text-font;
+      font-size: 15px;
+      color: black;
+    }
+     h1{
+      text-align: center;
+      margin-bottom: 4%;
+      font-family: $text-font;
+      font-size: 50px;
+      color: black;
+  }
+  
+  
 
   
+  
+   h2{
+      margin-bottom: 4%;
+      font-family: $text-font;
+      font-size: 35px;
+      color: black;
+  }
+  
+   h3{
+      text-align: center;
+      margin-bottom: 4%;
+      font-family: $text-font;
+      font-size: 25px;
+      color: black;
+  }
+  
+   p {
+    margin-bottom: 4%;
+    font-family: $text-font;
+    font-size: 18.2px;
+    color: black;
+  }
+  
+  &:nth-child(3) {
+    p {
+      &:first-of-type {
+        &:first-letter {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+  }
 
   @media (max-width:600px) {
         .popup-overlay{
@@ -1018,6 +1159,15 @@ a{
             display: none;
         
         }
+        .pagina{
+          min-height: 90vh;
+        }
+
+        .dontshow{
+          display: block;
+        }
+
+
   }
 
  

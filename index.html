@@ -5,10 +5,12 @@
     <link rel="stylesheet" href="./frag.css">
     <script type="text/javascript" src="./script.js"></script>
     <script type="text/javascript" src="./frag.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.11/dist/gsap.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -70,15 +72,15 @@
 <section class="seccion1">
 
 
-    <section class="bio">
-        <div id="bio" class="hidden float typing-container">
+    <section class="bio scrollr">
+        <div id="bio" class="float typing-container">
             <div class="pfp">
             </div>
             
                 <h1>Hi! I'm <span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
                 <p><br>
-                   Introducing CrisKop, is a 16 year old boy who likes programming, rythm games, and much more.<br><br>
-                    Since like i had nine years i started liking some things related to software, two years later, i started coding my first program, having me now with a lot of knowledge since then
+                   Introducing CrisKop, a 16 year old boy who likes programming, rythm games, and much more.<br><br>
+                    Started coding 8 years ago, the same age as computer taste began, more related to web and game development.
                 </p>
               </div>
             
@@ -127,23 +129,23 @@
     </section>
 
     <section id="redes" class="redes">
-      <div id="yt" class="yt panel float hidden" onclick="window.open('https://www.youtube.com/criskopv/','mywindow')">
+      <div id="yt" class="yt panel float scrollr" onclick="window.open('https://www.youtube.com/criskopv/','mywindow')">
         <div class="ytlogo"></div>
         <div class="name"><a>@CrisKopv</a></div>
       </div>
 
-      <div id="dc" onmouseout="outFunc()" onclick="copydc()" class="tooltip dc panel float hidden">
+      <div id="dc" onmouseout="outFunc()" onclick="copydc()" class="tooltip dc panel float scrollr">
         <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
         <div class="dclogo"></div>
         <div class="name"><a>CrisElKopo#6731</a></div>
       </div>
 
-      <div id="ig" class="ig panel float hidden" onclick="window.open('https://www.instagram.com/gold_cris__/','mywindow')">
+      <div id="ig" class="ig panel float scrollr" onclick="window.open('https://www.instagram.com/gold_cris__/','mywindow')">
         <div class="iglogo"></div>
         <div class="name"><a>@gold_cris__</a></div>
       </div>
 
-      <div id="tw" class="tw panel float hidden" onclick="window.open('https://twitter.com/KopCris','mywindow')">
+      <div id="tw" class="tw panel float scrollr" onclick="window.open('https://twitter.com/KopCris','mywindow')">
         <div class="twlogo"></div>
         <div class="name"><a>@KopCris</a></div>
       </div>
@@ -151,10 +153,10 @@
 
     <a href="#projects">
     <section class="flechas">
-    <p id="f0" class="float hidden">GO DOWN</p>
-    <img id="f1" class="float hidden" src="./img/arrowdown.svg"></svg>
-    <img id="f2" class="float hidden" src="./img/arrowdown.svg"></svg>
-    <img id="f3" class="float hidden" src="./img/arrowdown.svg"></svg>
+    <p id="f0" class="float scrollr">GO DOWN</p>
+    <img id="f1" class="float scrollr" src="./img/arrowdown.svg"></svg>
+    <img id="f2" class="float scrollr" src="./img/arrowdown.svg"></svg>
+    <img id="f3" class="float scrollr" src="./img/arrowdown.svg"></svg>
     </section>
   </a>
 
@@ -190,6 +192,7 @@
 
         <div class="buttons">
           <button class="open" type="button">Leer fragmento</button>
+          <button class="movilview dontshow" type="button">Leer fragmento</button>
           <button class="compra" onclick="window.open('https://a.co/d/berm1Bs', '_blank')" type="button">Comprar!</button>
         </div>
       </div>
@@ -223,7 +226,86 @@
   </section>
 
 
-  
+  <section class="prevmovil">
+
+    <div class="pagina portada"></div>
+          
+  </div>
+  <div class="pagina">
+      <br>
+     <h1>VI UNA CASCADA BRILLANTE</h1>
+     <h3>Cristian Orlando Sánchez Prince</h3>
+     <div>1</div>
+  </div>
+
+  <div class="pagina">
+      <h3>Capítulos.</h3>
+      <p>Brillo Dorado – Cap. 1</p>
+      <p>Interferencia – Cap. 2</p>
+      <p>Sin señal – Cap. 3</p>
+      <p>Vuelta al aire – Cap. 4</p>
+      <p>Cascada – Cap. 5</p>
+      <p>Prediciendo Luz – Cap. 6</p>
+      <p>Agüita pa’ despertar – Cap. 7</p>
+      <div>2</div>
+
+  </div>
+
+
+  <div class="pagina">
+      <h2>Brillo Dorado – Cap. 1</h2>
+      <p>“Te amo”, comienza la historia que en mi cabeza estuve imaginando por mucho tiempo, vi algo brillante estar en mi entorno, algo deslumbraba mis ojos para donde quiera que mire, volteo y sigo viendo su reflejo, no sé si mi mente se quedó con su manera de brillar o es que la estoy viendo a ella.</p>
+      <p>“Te amo”, ese color, esa esencia, ese brillo, lo empiezo a amar, a recordar y a ver a través de él algo muy hermoso, algo que siento que me va a faltar ver después.</p>
+      <p>“Te amo”, estoy convencido de amar esa vista, verla hace que mi corazón insista, caer otra vez en amor hace pensar a mi mente, no sé si de nuevo mi corazón resista esa mirada resplandeciente, siento que ya está lista toda la verdad sobre lo que siento al recibir ese brillo, muchas veces analizo y puede parecer sencillo, pero no lo es, son emociones combinadas contenidas, revoluciones de mariposas dando vueltas sobre mí, estrellas en este cielo que miro, que recuerdo, que admiro,</p>
+      <div>3</div>
+    </div>
+  <div class="pagina">
+      <p>que espero, que respiro y que hasta eso último me hace pensar en ella.</p>
+      <p>“¿Te amo?”, amo todo lo que he visto, poco he actuado, solo pienso en eso, pero no hago nada, talvez espere una oportunidad, aunque esto ya me ha salido mal antes.</p>
+      <p>A mi mente llegan recuerdos, recuerdos un poco traumáticos, me quitan la motivación para demostrar todo esto que siento, que pienso y hacerle notar lo mucho que me convenzo que le amo, capítulos llegan a mis recuerdos, pasado llega a mis encuentros, lloros llegan a mis pasatiempos, pero me debo contener, siento miedo de que vuelva a pasar lo mismo, aunque confío en todo lo que sé, sería un drama el no verme en esa meta que tan objetivamente observo.</p>
+      <p>Hace un buen tiempo, recuerdo rosas, felicidad pasando por ese lugar, ese recuerdo vuelve, y me llena la mente de ideas que podrían haber solucionado mi ansiedad en este momento si hubiera estado allá al estar acá ahora mismo.</p>
+      <div>4</div>
+    </div>
+  <div class="pagina">
+      <p>Pensando un poco en que hacer, mirando ese bonito atardecer, vi de nuevo ese brillo, ORO, se me vino a la mente, una joya que quisiera cuidar, una linda que quisiera amar, algo que quisiera que fuera real, pero solamente hice un saludo. Lloro por dentro, me siento como cuando estoy en el centro de una decepción sin final, me pongo nervioso, pero no se me nota, ni yo lo noto, pero posteriormente me doy cuenta que si fui y no me gusta, aunque en ese momento me gustó eso que hice que luego no me convencía.</p>
+      <p>Esa bella reina siempre junto a su princesa, su flamante y literalmente brillante mujer, pienso en un obstáculo relacionado para poder describirlo, una valla en un establo, una puerta en un castillo, un gato enjaulado en una especie de historia de fantasía feliz, una rana yendo a la velocidad de la luz en una rueda infinita, aunque mi otra sección, piensa en el contraste de la idea que lo obstaculiza, un atajo para llegar al destino, una llama azul que solo me ayuda en ese objetivo, una luz en un pasillo oscuro. Lo triste es que no lo puedo confirmar, mi mente sigue en un pensar infinito que no describe con exactitud lo que se supone que pienso.</p>
+      <div>5</div>
+    </div>
+  <div class="pagina">
+      <p>¿Puedo complementarme con esa princesa para llegar a la reina? No lo veo muy inteligente, pero parece que fueran imanes, no hay manera de ver oportunidad en donde las dos, no perciban lo que solo una debe llegar a ver. Un poco de pena, vergüenza sobre esto, no, ya me pasó antes y aseguro que no es así.</p>
+      <p>Dice mi mente que repetir algo que salió mal puede salir mal, pero si cambio las cosas a un ochenta por ciento de lo que me salió mal antes sé que saldrá bien.</p>
+      <p>Vuelvo a mi mundo, vuelvo a mi rutina, el tiempo ha pasado más rápido desde que me desprendí de ella, el tiempo me ha cegado, especialmente por esa vez no estar enfocado, mi vista vio su brillo desde casi el inicio de mi cambio en mi pensamiento, había observado los efectos que esa joya causó en mí, y lo ignoré, hice otras cosas y siento que no valieron la pena. </p>
+      <p>Desde el inicio convencido que mi otra meta iba a ser lograda y no fue así, me interpuso pensamientos de nuevo, un frío que se reinicia en mi contra, todo eso complementado de que, de hecho, había empezado a llover.</p>
+      <div>6</div>
+    </div>
+  <div class="pagina">
+      <p>Un girasol que veo girando desde hace mucho tiempo, sigue girando cuando no lo veo, yo giraba para verlo y ahora ese girasol no lo volví a ver girar, mirada perdida, callejón sin salida, y volví a ese lugar. Ese miedo tan escandaloso de no reiterar la observación de un lindo paisaje, aunque sea una flor la que determina el linaje de todo mi pensamiento, un cielo pintado un poco borroso, o eso percibo desde que el paisaje no lo acompaña, falta de motivación causada por decepción de hechos anteriores y actuales que me llevan a esta angustia a lo mejor un poco exagerada pero que tiene razón de ser.</p>
+      <p>Una vez me dijeron que nunca me rinda, nunca lo hice, pero no busqué alternativas para eso, dando lo máximo di lo mínimo por el límite que sin sentido alguno coloqué en mi red lógica. Empezando no hay alternativas, pero no se ha repasado el primer paso, aunque al final de todo, esto es una alternativa completa, y esa alternativa ahora es mi camino principal y destino por llegar.</p>
+      <p>“Te amo”, de nuevo lo repito, esta vez en negrilla de mi voz alzada, mi mente lo confirma, pero mi cuerpo no lo transmite, sigo sin progresar</p>
+      <div>7</div>
+    </div>
+  <div class="pagina">
+      <p>demasiado, sigo en un paso negativo en el orden, solo miro, y siento que no progreso, aseguro que esto es una alternativa, pero ni siquiera la estoy tomando, solo estoy asegurando haberla tomado.</p>
+      <p>Esto tiene similitud a una distracción más que a otro camino, pero la motivación que el camino principal se llevó, me hace afirmar eso, voy poco a poco avanzando sin progreso alguno.</p>
+      <p>Tomar de la mano pensamientos y ese pensamiento específico, mi alternativa a la tristeza, es efectivo solo y solo si los tomo al final de todo, no solo si admiro el buen resultado que puede llegar a tener, y solo eso. La alternativa que mis ojos vieron no se siente tan confiable para mi corazón, este derramó una gran cantidad hacia el camino principal, ese del cual no encuentro salida, está desmotivado, no sabe qué hacer y se tienta al ver esa joya, de comprarla recogiendo lo que ya derramó anteriormente. Mi mente y mi vista sienten lo mismo, debería tomarlo, pero mi corazón me lo impide.</p>
+      <p>Ese frío compuesto ahora es hielo, así de comprimido me siento en este valle de nieve, pero sin abrigo, nada para cubrirme, todo a la</p>
+      <div>8</div>
+    </div>
+  <div class="pagina">
+      <p>deriva, sin tomar iniciativa de salir en el contraste de la única puerta, me auto decepciono por verme sin pensamiento alguno, sin salida de esta oscuridad que me tiene inmerso en un mar lleno de desgracias y tristezas.</p>
+      <p>Empiezo a quitar esa nieve, planificando acciones, observando aviones y pensando como escapar, sin embargo, sigo inmerso en ese camino sin salida, o eso parece por su tremenda dificultad, debo esforzarme más.</p>
+      <p>Comienza la montaña rusa la cual me esperaba que iniciara después, cambio bipolar repentino que nubla mi vista, la deja lista para caer mucho más en ese agujero que ni yo conozco el destino que tiene. Rueda de la fortuna sin rotación en la cual estoy encerrado en la zona superior, aunque, sigo sin verlo, está demasiado nublado.</p>
+      <p>Empiezo a quedarme dormido, cegado por una granada, silenciado por un altavoz, inmóvil por fuerza divina, moviéndome por la neblina, pero sin realmente moverme fuera de ella, hay viento muy fuerte impidiendo mi paso, empujando más fuerte empiezo a avanzar,</p>
+      <div>9</div>
+    </div>
+  <div class="pagina">
+     <p>depende de mi mente que tanto avanzo, en esta nube que no muestra la verdad.</p>
+     <div>10</div>
+    </div>
+
+  <div class="pagina contraportada"></div>
+  <button class="movilviewc">Cerrar</button> 
+  </section>
 
 
    <!--Creates the popup body-->
@@ -324,7 +406,8 @@
  
        <!--popup's close button-->
        <div class="buttonspop">
-       <div class="instruction">Click al libro</div>
+       <div class="instruction">Click al libro <br>(Si no funciona, click al boton "Fix")</div>
+       <button class="movilview moresize" type="button">Fix book</button>
         <button class="close">Cerrar</button>   
       </div>
   </div>
@@ -346,6 +429,22 @@
           $(".popup-overlay, .popup-content").removeClass("active");
         });
       });
+
+      $(".movilview").on("click", function() {
+        scrollPosition = $(window).scrollTop(); // Guarda la posición actual del desplazamiento
+        $("body").addClass("popup-open"); // Agrega una clase al cuerpo para desactivar el desplazamiento
+        $(".prevmovil").css("display", "flex")
+        $(".popup-overlay, .popup-content").removeClass("active");
+      });
+
+      $(".movilviewc").on("click", function() {
+        $("body").removeClass("popup-open"); // Elimina la clase del cuerpo para habilitar el desplazamiento
+        $(window).scrollTop(scrollPosition); // Restaura la posición del desplazamiento
+        $(".prevmovil").css("display", "none")
+        $(".popup-overlay, .popup-content").removeClass("active");
+      });
+   
+ 
     
     </script>
 
@@ -356,51 +455,20 @@
 </html>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-    $(document).ready(function(){
-      // Add smooth scrolling to all links
-      $("a").on('click', function(event) {
-    
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-          // Prevent default anchor click behavior
-          event.preventDefault();
-    
-          // Store hash
-          var hash = this.hash;
-    
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 500, function(){
-       
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          });
-        } // End if
-      });
-    });
-    </script>
-
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script>
-  
-    
-      gsap.registerPlugin(ScrollTrigger);
-    
-      const lenis = new Lenis({
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-      })
-    
-      function raf(time) {
-          lenis.raf(time)
-          requestAnimationFrame(raf)
-      }
-    
-      requestAnimationFrame(raf)
-    
       
-    </script>
+  ScrollReveal({
+    reset: true,
+    distance: '60px',
+    duration: 1000,
+    delay: 50
+  })
+
+  ScrollReveal().reveal('.seccion', {origin: 'top'})
+  ScrollReveal().reveal('.scrollr', {origin: 'top'})
+
+
+ 
+
+  
+</script>
