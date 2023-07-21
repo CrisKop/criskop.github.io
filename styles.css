@@ -1136,7 +1136,7 @@ a.link:after {
   border-top: 2px solid rgb(226, 205, 173);
   max-width: 400px;
   width: 100vw;
-  min-height: 600px;
+  min-height: 700px;
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
