@@ -26,6 +26,10 @@
   user-select: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 .bg {
   width: 100vw;
   height: 100vh;
@@ -246,7 +250,7 @@ body {
 }
 .hover,
 .hover:hover:not(.disabled):not([disabled]) {
-  transition: all 0.8s ease;
+  transition: all 0.5s ease;
 }
 
 a {
@@ -308,6 +312,14 @@ img {
   background: url("./img/bioimg.png");
   background-size: cover;
   margin-top: 30px;
+}
+
+.projecttitle {
+  font-size: 60px;
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .typing-container {
@@ -844,7 +856,7 @@ a:visited {
   width: 180px;
   display: flex;
   gap: 20px;
-  transition-duration: 500ms;
+  transition-duration: 300ms !important;
   transition-property: all;
 }
 
@@ -866,7 +878,7 @@ a:visited {
 .redes .yt:hover {
   width: 360px;
   --yt-display: block;
-  transition-duration: 500ms;
+  transition-duration: 300ms !important;
   transition-property: all;
 }
 
@@ -874,7 +886,7 @@ a:visited {
   width: 180px;
   display: flex;
   gap: 20px;
-  transition: all 0.5s;
+  transition: all 0.3s !important;
 }
 
 .redes .dc .dclogo {
@@ -901,7 +913,7 @@ a:visited {
   width: 180px;
   display: flex;
   gap: 20px;
-  transition: all 0.5s;
+  transition: all 0.3s !important;
 }
 
 .redes .ig .iglogo {
@@ -954,7 +966,7 @@ a:visited {
 .hidden {
   opacity: 0;
   filter: blur(5px);
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 .show {
@@ -1182,6 +1194,9 @@ a.link:after {
 }
 
 @media (max-width: 600px) {
+  .seccion2 .parts .part1 {
+    gap: 0px;
+  }
   .popup-overlay {
     display: none;
   }
