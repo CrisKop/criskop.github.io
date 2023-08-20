@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./nav.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./libro.css">
     <link rel="stylesheet" href="./frag.css">
-    <script type="text/javascript" src="./script.js"></script>
-    <script type="text/javascript" src="./frag.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.11/dist/gsap.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
@@ -17,460 +15,235 @@
     <meta name="google" content="notranslate">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CrisKop</title>
-    <meta content="CrisKop Page" property="og:title" />
-    <meta content="Pagina personal de CrisKop" property="og:description" />
+    <meta content="CrisKop" property="og:title" />
+    <meta content="Full stack developer portfolio: CrisKop" property="og:description" />
     <meta content="https://criskop.github.com" property="og:url" />
-    <meta content="https://criskop.github.io/img/imgck.png" property="og:image" />
+    <meta content="https://criskop.github.io/img/corona.png" property="og:image" />
     <meta content="#FFD35C" data-react-helmet="true" name="theme-color" />
 </head>
-<body id="body">
+<body>
+    <div class="background">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+      </div>
     
-  <div class="bgblur"></div>
 
-    <section class="navegador">
-    <nav class="nav container" id="nav">
-        <h2 class="nav__logo" id="top">C</h2>
     
-        <ul class="nav__links">
-    
-            <li class="nav__item">
-                <a href="#projects" class="nav__link">Projects</a>
-            </li>
-        
-        </ul>
-    
-        <a href="#nav" class="nav__hamburguer">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFrSURBVHhe7duxSQVBFEDRr4hgKIKBqV1YhSVpDWquuVZhCVqAiZnWsM6AU8Pe4Bx4/JdfGPi7O0fbth3oOP7/JUKQGEFiBIkRJEaQGEFiBIlZfwzPxtzOhd18jvlYQa7GfM+F3dyPuXNkxQgSI0iMIDGCxAgSI0iMIDGCxAgSI0iMIDHr4eL5mKe5sJu3Ob7LinFkxQgSI0iMIDGCxAgSI0iMIDGCxAgSI0iMIDGCxAgSI0iMIDGCxAgSs17hXox5nQu7eRnz7AZVhxtURYLECBIjSIwgMYLECBIjSIwgMYLECBIjSMx6uHg65mYu7OZrjhtUMY6sGEFiBIkRJEaQGEFiBIkRJEaQGEFiBIkRJEaQGEFiBIkRJEaQmPXG8GTM9VzYzc+YXxd2OlzYKRIkRpAYQWIEiREkRpAYQWIEiREkRpAYQWLWw8XLMe9zYTcPYx5d2IlxZMUIEiNIjCAxgsQIEiNIjCAph8MfxVg5lQYPgIkAAAAASUVORK5CYII=" class="nav__icon">
-        </a>
-    
-        <a href="#" class="nav__close">
-            <img src="data:image/png;base64,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" class="nav__icon">
-        </a>
-    
-    </nav>
+
+      <section class="section1">
+    <section class="presentation">
+
+        <div class="corona"></div>
+
+        <div class="name">
+            <h1 class="title">CRISKOP</h1>
+        </div>
+
+        <div class="description">
+            <div class="typing-effect" id="typing-container">
+                <span id="text"></span>
+                <span id="cursor">|</span>
+              </div>
+        </div>
+
+    </section>
+
+    <section class="botones">
+        <a href="#books" class="btn2">Books</a>
+        <a href="#experience" class="btn1">Experience</a>
+    </section>
+
 </section>
 
+<section class="aboutme ">
+    <h1 class="scrollreveal" >ABOUT ME</h1>
 
+    <section class="parts scrollreveal">
 
-<section class="bgxd">
-    <div class="circles">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    </div>
-</section>
-
-
-
-<section class="seccion1">
-
-
-    <section class="bio scrollr">
-        <div id="bio" class="float typing-container">
+        <div class="part1">
             <div class="pfp">
+                <div class="img"></div>
             </div>
-            
-                <h1>Hi! I'm <span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
-                <p><br>
-                   Introducing CrisKop, a 16 year old boy who likes programming, rythm games, and much more.<br><br>
-                    Started coding 8 years ago, the same age as computer taste began, more related to web and game development.
-                </p>
-              </div>
-            
-              <script>
-                const typedTextSpan = document.querySelector(".typed-text");
-            const cursorSpan = document.querySelector(".cursor");
-            
-            const textArray = ["CrisKop"];
-            const typingDelay = 200;
-            const erasingDelay = 100;
-            const newTextDelay = 2000; // Delay between current and next text
-            let textArrayIndex = 0;
-            let charIndex = 0;
-            
-            function type() {
-              if (charIndex < textArray[textArrayIndex].length) {
-                if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-                typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-                charIndex++;
-                setTimeout(type, typingDelay);
-              } 
-              else {
-                cursorSpan.classList.remove("typing");
-                  setTimeout(erase, newTextDelay);
-              }
-            }
-            
-            function erase() {
-                if (charIndex > 0) {
-                if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-                typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
-                charIndex--;
-                setTimeout(erase, erasingDelay);
-              } 
-              else {
-                cursorSpan.classList.remove("typing");
-                textArrayIndex++;
-                if(textArrayIndex>=textArray.length) textArrayIndex=0;
-                setTimeout(type, typingDelay + 1100);
-              }
-            }
-            
-            document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-              if(textArray.length) setTimeout(type, newTextDelay + 250);
-            });</script> <!--TYPING EFFECT-->
+    
+            <h2>Cristian Prince</h2>
+        </div>
+
+        <div class="part2">
+
+            <h2>WHO IS CRISKOP?</h2>
+
+            <div class="bio">
+            <p>Skilled full stack developer with focus on web developing, writing and learning more things.<br><br> CrisKop is:</p>
+            </div>
+
+            <div class="desxd">
+            <li>THE developer of your choice</li>
+            <li>THE poetic writer with a outstanding skill</li>
+            <li>Advanced in design of web apps and pages</li>
+            <li>THE BEST OF THE BESTS</li>
+            </div>
+
+        </div>
+
     </section>
+</section>
 
-    <section id="redes" class="redes">
-      <div id="yt" class="yt panel scrollr" onclick="window.open('https://www.youtube.com/criskopv/','mywindow')">
-        <div class="ytlogo"></div>
-        <div class="name"><a>@CrisKopv</a></div>
-      </div>
+<section id="books" class="section2 ">
+        
+    <h1 class="scrollreveal">BOOKS</h1>
+    <!-- Projects -->
+    <section class="books scrollreveal">
 
-      <div id="dc" onmouseout="outFunc()" onclick="copydc()" class="tooltip dc panel float scrollr">
-        <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
-        <div class="dclogo"></div>
-        <div class="name"><a>CrisElKopo#6731</a></div>
-      </div>
+        <h2>VI UNA CASCADA BRILLANTE</h2>
 
-      <div id="ig" class="ig panel float scrollr" onclick="window.open('https://www.instagram.com/gold_cris__/','mywindow')">
-        <div class="iglogo"></div>
-        <div class="name"><a>@gold_cris__</a></div>
-      </div>
+<section class="bookinfo">
 
-      <div id="tw" class="tw panel float scrollr" onclick="window.open('https://twitter.com/KopCris','mywindow')">
-        <div class="twlogo"></div>
-        <div class="name"><a>@KopCris</a></div>
-      </div>
-    </section>
-
-    <a href="#projects">
-    <section class="flechas">
-    <p id="f0" class="float scrollr">GO DOWN</p>
-    <img id="f1" class="float scrollr" src="./img/arrowdown.svg"></svg>
-    <img id="f2" class="float scrollr" src="./img/arrowdown.svg"></svg>
-    <img id="f3" class="float scrollr" src="./img/arrowdown.svg"></svg>
-    </section>
-  </a>
-
-  </section><!--Fin seccion 1-->
-
-  <section id="projects" class="seccion seccion2">
-
-<h1 class="projecttitle">PROJECTS</h1>
-
-    <section class="parts">
-
-      <div id="libro" class="part1">
-        <h1 class="main-title">Mi libro</h1>
         <div class="containerbook">
-          <div class="book">
-            <div class="front">
-              <div class="cover">
-                      
+            <div class="book">
+              <div class="front">
+                <div class="cover">
+                        
+                </div>
               </div>
-            </div>
-            <div class="left-side">
-              <h2>
-                <span>Cristian Prince</span>
-                <span>2023</span>
-              </h2>
-            </div>
-
-            <div class="back">
-              <div class="cover2">
-                      
+              <div class="left-side">
+                <h2>
+                  <span>Cristian Prince</span>
+                  <span>2023</span>
+                </h2>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="buttons">
-          <button class="open" type="button">Leer fragmento</button>
-          <button class="movilview dontshow" type="button">Leer fragmento</button>
-          <button class="compra" onclick="window.open('https://a.co/d/berm1Bs', '_blank')" type="button">Comprar!</button>
-        </div>
-      </div>
-
-
-    <div class="part2">
-      <div class="containers">
-        <h2 class="main-title">Queso Dash Page</h2>
-        <div class="content">
-          <div class="image">
-            <img src="./img/qd.png" alt="">
-          </div>
-          <div class="text-box">
-            <h3>QDPage</h3>
-            <p>Pagina personalizada y tematizada en Queso Dash</p>
-          </div>
-        </div>
-        <div class="buttons">
-        <button onclick="window.open('https://quesodash.fun/', '_blank')" type="button">Ir a la página!</button>
-        <button onclick="window.open('https://discord.gg/ET4NYW6VHS', '_blank')" type="button">Queso Dash Discord</button>
-      </div>
-      </div>
-    </div>
-
   
+              <div class="back">
+                <div class="cover2">
+                        
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="buttons">
+            <button class="movilview" type="button">See a preview</button>
+            <button class="compra" onclick="window.open('https://a.co/d/berm1Bs', '_blank')" type="button">Buy! (Amazon)</button>
+            <button class="compra" onclick="window.open('https://api.whatsapp.com/send?phone=+573178886108&text=Hola%20Cris!%20Me%20interesa%20tu%20libro%20%22VI%20UNA%20CASCADA%20BRILLANTE%22,%20¿me%20podrías%20dar%20más%20información%20acerca%20de%20él?', '_blank')" type="button">Buy! (Only Colombia)</button>
+          </div>
+        </div>
+    </section>
 
     </section>
 
-    
+</section>
 
-  </section>
+    <section id="experience" class="section3">
+        
+        <h1 class="scrollreveal" >EXPERIENCE</h1>
+        <!-- Projects -->
+        <section class="projects scrollreveal">
 
+        </section>
 
-  <section class="prevmovil">
+    </section>
 
-    <div class="pagina portada"></div>
-          
-  </div>
-  <div class="pagina">
-      <br>
-     <h1>VI UNA CASCADA BRILLANTE</h1>
-     <h3>Cristian Orlando Sánchez Prince</h3>
-     <div>1</div>
-  </div>
+    <section class="contact">
+        <h2 class="scrollreveal">DO YOU WANT A WEB APP?</h2>
 
-  <div class="pagina">
-      <h3>Capítulos.</h3>
-      <p>Brillo Dorado – Cap. 1</p>
-      <p>Interferencia – Cap. 2</p>
-      <p>Sin señal – Cap. 3</p>
-      <p>Vuelta al aire – Cap. 4</p>
-      <p>Cascada – Cap. 5</p>
-      <p>Prediciendo Luz – Cap. 6</p>
-      <p>Agüita pa’ despertar – Cap. 7</p>
-      <div>2</div>
+        <h3 class="scrollreveal">You can contact me here:</h3>
 
-  </div>
-
-
-  <div class="pagina">
-      <h2>Brillo Dorado – Cap. 1</h2>
-      <p>“Te amo”, comienza la historia que en mi cabeza estuve imaginando por mucho tiempo, vi algo brillante estar en mi entorno, algo deslumbraba mis ojos para donde quiera que mire, volteo y sigo viendo su reflejo, no sé si mi mente se quedó con su manera de brillar o es que la estoy viendo a ella.</p>
-      <p>“Te amo”, ese color, esa esencia, ese brillo, lo empiezo a amar, a recordar y a ver a través de él algo muy hermoso, algo que siento que me va a faltar ver después.</p>
-      <p>“Te amo”, estoy convencido de amar esa vista, verla hace que mi corazón insista, caer otra vez en amor hace pensar a mi mente, no sé si de nuevo mi corazón resista esa mirada resplandeciente, siento que ya está lista toda la verdad sobre lo que siento al recibir ese brillo, muchas veces analizo y puede parecer sencillo, pero no lo es, son emociones combinadas contenidas, revoluciones de mariposas dando vueltas sobre mí, estrellas en este cielo que miro, que recuerdo, que admiro,</p>
-      <div>3</div>
-    </div>
-  <div class="pagina">
-      <p>que espero, que respiro y que hasta eso último me hace pensar en ella.</p>
-      <p>“¿Te amo?”, amo todo lo que he visto, poco he actuado, solo pienso en eso, pero no hago nada, talvez espere una oportunidad, aunque esto ya me ha salido mal antes.</p>
-      <p>A mi mente llegan recuerdos, recuerdos un poco traumáticos, me quitan la motivación para demostrar todo esto que siento, que pienso y hacerle notar lo mucho que me convenzo que le amo, capítulos llegan a mis recuerdos, pasado llega a mis encuentros, lloros llegan a mis pasatiempos, pero me debo contener, siento miedo de que vuelva a pasar lo mismo, aunque confío en todo lo que sé, sería un drama el no verme en esa meta que tan objetivamente observo.</p>
-      <p>Hace un buen tiempo, recuerdo rosas, felicidad pasando por ese lugar, ese recuerdo vuelve, y me llena la mente de ideas que podrían haber solucionado mi ansiedad en este momento si hubiera estado allá al estar acá ahora mismo.</p>
-      <div>4</div>
-    </div>
-  <div class="pagina">
-      <p>Pensando un poco en que hacer, mirando ese bonito atardecer, vi de nuevo ese brillo, ORO, se me vino a la mente, una joya que quisiera cuidar, una linda que quisiera amar, algo que quisiera que fuera real, pero solamente hice un saludo. Lloro por dentro, me siento como cuando estoy en el centro de una decepción sin final, me pongo nervioso, pero no se me nota, ni yo lo noto, pero posteriormente me doy cuenta que si fui y no me gusta, aunque en ese momento me gustó eso que hice que luego no me convencía.</p>
-      <p>Esa bella reina siempre junto a su princesa, su flamante y literalmente brillante mujer, pienso en un obstáculo relacionado para poder describirlo, una valla en un establo, una puerta en un castillo, un gato enjaulado en una especie de historia de fantasía feliz, una rana yendo a la velocidad de la luz en una rueda infinita, aunque mi otra sección, piensa en el contraste de la idea que lo obstaculiza, un atajo para llegar al destino, una llama azul que solo me ayuda en ese objetivo, una luz en un pasillo oscuro. Lo triste es que no lo puedo confirmar, mi mente sigue en un pensar infinito que no describe con exactitud lo que se supone que pienso.</p>
-      <div>5</div>
-    </div>
-  <div class="pagina">
-      <p>¿Puedo complementarme con esa princesa para llegar a la reina? No lo veo muy inteligente, pero parece que fueran imanes, no hay manera de ver oportunidad en donde las dos, no perciban lo que solo una debe llegar a ver. Un poco de pena, vergüenza sobre esto, no, ya me pasó antes y aseguro que no es así.</p>
-      <p>Dice mi mente que repetir algo que salió mal puede salir mal, pero si cambio las cosas a un ochenta por ciento de lo que me salió mal antes sé que saldrá bien.</p>
-      <p>Vuelvo a mi mundo, vuelvo a mi rutina, el tiempo ha pasado más rápido desde que me desprendí de ella, el tiempo me ha cegado, especialmente por esa vez no estar enfocado, mi vista vio su brillo desde casi el inicio de mi cambio en mi pensamiento, había observado los efectos que esa joya causó en mí, y lo ignoré, hice otras cosas y siento que no valieron la pena. </p>
-      <p>Desde el inicio convencido que mi otra meta iba a ser lograda y no fue así, me interpuso pensamientos de nuevo, un frío que se reinicia en mi contra, todo eso complementado de que, de hecho, había empezado a llover.</p>
-      <div>6</div>
-    </div>
-  <div class="pagina">
-      <p>Un girasol que veo girando desde hace mucho tiempo, sigue girando cuando no lo veo, yo giraba para verlo y ahora ese girasol no lo volví a ver girar, mirada perdida, callejón sin salida, y volví a ese lugar. Ese miedo tan escandaloso de no reiterar la observación de un lindo paisaje, aunque sea una flor la que determina el linaje de todo mi pensamiento, un cielo pintado un poco borroso, o eso percibo desde que el paisaje no lo acompaña, falta de motivación causada por decepción de hechos anteriores y actuales que me llevan a esta angustia a lo mejor un poco exagerada pero que tiene razón de ser.</p>
-      <p>Una vez me dijeron que nunca me rinda, nunca lo hice, pero no busqué alternativas para eso, dando lo máximo di lo mínimo por el límite que sin sentido alguno coloqué en mi red lógica. Empezando no hay alternativas, pero no se ha repasado el primer paso, aunque al final de todo, esto es una alternativa completa, y esa alternativa ahora es mi camino principal y destino por llegar.</p>
-      <p>“Te amo”, de nuevo lo repito, esta vez en negrilla de mi voz alzada, mi mente lo confirma, pero mi cuerpo no lo transmite, sigo sin progresar</p>
-      <div>7</div>
-    </div>
-  <div class="pagina">
-      <p>demasiado, sigo en un paso negativo en el orden, solo miro, y siento que no progreso, aseguro que esto es una alternativa, pero ni siquiera la estoy tomando, solo estoy asegurando haberla tomado.</p>
-      <p>Esto tiene similitud a una distracción más que a otro camino, pero la motivación que el camino principal se llevó, me hace afirmar eso, voy poco a poco avanzando sin progreso alguno.</p>
-      <p>Tomar de la mano pensamientos y ese pensamiento específico, mi alternativa a la tristeza, es efectivo solo y solo si los tomo al final de todo, no solo si admiro el buen resultado que puede llegar a tener, y solo eso. La alternativa que mis ojos vieron no se siente tan confiable para mi corazón, este derramó una gran cantidad hacia el camino principal, ese del cual no encuentro salida, está desmotivado, no sabe qué hacer y se tienta al ver esa joya, de comprarla recogiendo lo que ya derramó anteriormente. Mi mente y mi vista sienten lo mismo, debería tomarlo, pero mi corazón me lo impide.</p>
-      <p>Ese frío compuesto ahora es hielo, así de comprimido me siento en este valle de nieve, pero sin abrigo, nada para cubrirme, todo a la</p>
-      <div>8</div>
-    </div>
-  <div class="pagina">
-      <p>deriva, sin tomar iniciativa de salir en el contraste de la única puerta, me auto decepciono por verme sin pensamiento alguno, sin salida de esta oscuridad que me tiene inmerso en un mar lleno de desgracias y tristezas.</p>
-      <p>Empiezo a quitar esa nieve, planificando acciones, observando aviones y pensando como escapar, sin embargo, sigo inmerso en ese camino sin salida, o eso parece por su tremenda dificultad, debo esforzarme más.</p>
-      <p>Comienza la montaña rusa la cual me esperaba que iniciara después, cambio bipolar repentino que nubla mi vista, la deja lista para caer mucho más en ese agujero que ni yo conozco el destino que tiene. Rueda de la fortuna sin rotación en la cual estoy encerrado en la zona superior, aunque, sigo sin verlo, está demasiado nublado.</p>
-      <p>Empiezo a quedarme dormido, cegado por una granada, silenciado por un altavoz, inmóvil por fuerza divina, moviéndome por la neblina, pero sin realmente moverme fuera de ella, hay viento muy fuerte impidiendo mi paso, empujando más fuerte empiezo a avanzar,</p>
-      <div>9</div>
-    </div>
-  <div class="pagina">
-     <p>depende de mi mente que tanto avanzo, en esta nube que no muestra la verdad.</p>
-     <div>10</div>
-    </div>
-
-  <div class="pagina contraportada"></div>
-  <button class="movilviewc">Cerrar</button> 
-  </section>
-
-
-   <!--Creates the popup body-->
-
-
-   <div style="z-index:999;" class="popup-overlay">
-    <!--Creates the popup content-->
-     <div class="popup-content">
- 
-        <section class="frag" id="frag">
-
-        <div class="bookfrag">
-            <div class="page cover-front" onclick="movePage(this, 1)">
-          
-            </div>
-            <div class="page cover-front" onclick="movePage(this, 2)"></div>
-            <div class="page text-page center" onclick="movePage(this, 3)">
-                <br>
-               <h1>VI UNA CASCADA BRILLANTE</h1>
-               <h3>Cristian Orlando Sánchez Prince</h3>
-            </div>
-            <div class="page text-page" onclick="movePage(this, 4)"> </div>
-        
-            <div class="page text-page" onclick="movePage(this, 5)"> 
-                <h3>Capítulos.</h3>
-                <p>Brillo Dorado – Cap. 1</p>
-                <p>Interferencia – Cap. 2</p>
-                <p>Sin señal – Cap. 3</p>
-                <p>Vuelta al aire – Cap. 4</p>
-                <p>Cascada – Cap. 5</p>
-                <p>Prediciendo Luz – Cap. 6</p>
-                <p>Agüita pa’ despertar – Cap. 7</p>
-        
-            </div>
-           
-            <div class="page text-page" onclick="movePage(this, 6)"> 
-        
-        
-            </div>
-            
-            <div class="page text-page" onclick="movePage(this, 7)">
-                <h2>Brillo Dorado – Cap. 1</h2>
-                <p>“Te amo”, comienza la historia que en mi cabeza estuve imaginando por mucho tiempo, vi algo brillante estar en mi entorno, algo deslumbraba mis ojos para donde quiera que mire, volteo y sigo viendo su reflejo, no sé si mi mente se quedó con su manera de brillar o es que la estoy viendo a ella.</p>
-                <p>“Te amo”, ese color, esa esencia, ese brillo, lo empiezo a amar, a recordar y a ver a través de él algo muy hermoso, algo que siento que me va a faltar ver después.</p>
-                <p>“Te amo”, estoy convencido de amar esa vista, verla hace que mi corazón insista, caer otra vez en amor hace pensar a mi mente, no sé si de nuevo mi corazón resista esa mirada resplandeciente, siento que ya está lista toda la verdad sobre lo que siento al recibir ese brillo, muchas veces analizo y puede parecer sencillo, pero no lo es, son emociones combinadas contenidas, revoluciones de mariposas dando vueltas sobre mí, estrellas en este cielo que miro, que recuerdo, que admiro,</p>
-            </div>
-            <div class="page text-page" onclick="movePage(this, 8)">
-                <p>que espero, que respiro y que hasta eso último me hace pensar en ella.</p>
-                <p>“¿Te amo?”, amo todo lo que he visto, poco he actuado, solo pienso en eso, pero no hago nada, talvez espere una oportunidad, aunque esto ya me ha salido mal antes.</p>
-                <p>A mi mente llegan recuerdos, recuerdos un poco traumáticos, me quitan la motivación para demostrar todo esto que siento, que pienso y hacerle notar lo mucho que me convenzo que le amo, capítulos llegan a mis recuerdos, pasado llega a mis encuentros, lloros llegan a mis pasatiempos, pero me debo contener, siento miedo de que vuelva a pasar lo mismo, aunque confío en todo lo que sé, sería un drama el no verme en esa meta que tan objetivamente observo.</p>
-                <p>Hace un buen tiempo, recuerdo rosas, felicidad pasando por ese lugar, ese recuerdo vuelve, y me llena la mente de ideas que podrían haber solucionado mi ansiedad en este momento si hubiera estado allá al estar acá ahora mismo.</p>
-            </div>
-            <div class="page text-page" onclick="movePage(this, 9)">
-                <p>Pensando un poco en que hacer, mirando ese bonito atardecer, vi de nuevo ese brillo, ORO, se me vino a la mente, una joya que quisiera cuidar, una linda que quisiera amar, algo que quisiera que fuera real, pero solamente hice un saludo. Lloro por dentro, me siento como cuando estoy en el centro de una decepción sin final, me pongo nervioso, pero no se me nota, ni yo lo noto, pero posteriormente me doy cuenta que si fui y no me gusta, aunque en ese momento me gustó eso que hice que luego no me convencía.</p>
-                <p>Esa bella reina siempre junto a su princesa, su flamante y literalmente brillante mujer, pienso en un obstáculo relacionado para poder describirlo, una valla en un establo, una puerta en un castillo, un gato enjaulado en una especie de historia de fantasía feliz, una rana yendo a la velocidad de la luz en una rueda infinita, aunque mi otra sección, piensa en el contraste de la idea que lo obstaculiza, un atajo para llegar al destino, una llama azul que solo me ayuda en ese objetivo, una luz en un pasillo oscuro. Lo triste es que no lo puedo confirmar, mi mente sigue en un pensar infinito que no describe con exactitud lo que se supone que pienso.</p>
-            </div>
-            <div class="page text-page" onclick="movePage(this, 10)">
-                <p>¿Puedo complementarme con esa princesa para llegar a la reina? No lo veo muy inteligente, pero parece que fueran imanes, no hay manera de ver oportunidad en donde las dos, no perciban lo que solo una debe llegar a ver. Un poco de pena, vergüenza sobre esto, no, ya me pasó antes y aseguro que no es así.</p>
-                <p>Dice mi mente que repetir algo que salió mal puede salir mal, pero si cambio las cosas a un ochenta por ciento de lo que me salió mal antes sé que saldrá bien.</p>
-                <p>Vuelvo a mi mundo, vuelvo a mi rutina, el tiempo ha pasado más rápido desde que me desprendí de ella, el tiempo me ha cegado, especialmente por esa vez no estar enfocado, mi vista vio su brillo desde casi el inicio de mi cambio en mi pensamiento, había observado los efectos que esa joya causó en mí, y lo ignoré, hice otras cosas y siento que no valieron la pena. </p>
-                <p>Desde el inicio convencido que mi otra meta iba a ser lograda y no fue así, me interpuso pensamientos de nuevo, un frío que se reinicia en mi contra, todo eso complementado de que, de hecho, había empezado a llover.</p>
-            </div>
-            <div class="page text-page" onclick="movePage(this, 11)">
-                <p>Un girasol que veo girando desde hace mucho tiempo, sigue girando cuando no lo veo, yo giraba para verlo y ahora ese girasol no lo volví a ver girar, mirada perdida, callejón sin salida, y volví a ese lugar. Ese miedo tan escandaloso de no reiterar la observación de un lindo paisaje, aunque sea una flor la que determina el linaje de todo mi pensamiento, un cielo pintado un poco borroso, o eso percibo desde que el paisaje no lo acompaña, falta de motivación causada por decepción de hechos anteriores y actuales que me llevan a esta angustia a lo mejor un poco exagerada pero que tiene razón de ser.</p>
-                <p>Una vez me dijeron que nunca me rinda, nunca lo hice, pero no busqué alternativas para eso, dando lo máximo di lo mínimo por el límite que sin sentido alguno coloqué en mi red lógica. Empezando no hay alternativas, pero no se ha repasado el primer paso, aunque al final de todo, esto es una alternativa completa, y esa alternativa ahora es mi camino principal y destino por llegar.</p>
-                <p>“Te amo”, de nuevo lo repito, esta vez en negrilla de mi voz alzada, mi mente lo confirma, pero mi cuerpo no lo transmite, sigo sin progresar</p>
-            </div>
-            <div class="page text-page" onclick="movePage(this, 12)">
-                <p>demasiado, sigo en un paso negativo en el orden, solo miro, y siento que no progreso, aseguro que esto es una alternativa, pero ni siquiera la estoy tomando, solo estoy asegurando haberla tomado.</p>
-                <p>Esto tiene similitud a una distracción más que a otro camino, pero la motivación que el camino principal se llevó, me hace afirmar eso, voy poco a poco avanzando sin progreso alguno.</p>
-                <p>Tomar de la mano pensamientos y ese pensamiento específico, mi alternativa a la tristeza, es efectivo solo y solo si los tomo al final de todo, no solo si admiro el buen resultado que puede llegar a tener, y solo eso. La alternativa que mis ojos vieron no se siente tan confiable para mi corazón, este derramó una gran cantidad hacia el camino principal, ese del cual no encuentro salida, está desmotivado, no sabe qué hacer y se tienta al ver esa joya, de comprarla recogiendo lo que ya derramó anteriormente. Mi mente y mi vista sienten lo mismo, debería tomarlo, pero mi corazón me lo impide.</p>
-                <p>Ese frío compuesto ahora es hielo, así de comprimido me siento en este valle de nieve, pero sin abrigo, nada para cubrirme, todo a la</p>
-            </div>
-            <div class="page text-page" onclick="movePage(this, 13)">
-                <p>deriva, sin tomar iniciativa de salir en el contraste de la única puerta, me auto decepciono por verme sin pensamiento alguno, sin salida de esta oscuridad que me tiene inmerso en un mar lleno de desgracias y tristezas.</p>
-                <p>Empiezo a quitar esa nieve, planificando acciones, observando aviones y pensando como escapar, sin embargo, sigo inmerso en ese camino sin salida, o eso parece por su tremenda dificultad, debo esforzarme más.</p>
-                <p>Comienza la montaña rusa la cual me esperaba que iniciara después, cambio bipolar repentino que nubla mi vista, la deja lista para caer mucho más en ese agujero que ni yo conozco el destino que tiene. Rueda de la fortuna sin rotación en la cual estoy encerrado en la zona superior, aunque, sigo sin verlo, está demasiado nublado.</p>
-                <p>Empiezo a quedarme dormido, cegado por una granada, silenciado por un altavoz, inmóvil por fuerza divina, moviéndome por la neblina, pero sin realmente moverme fuera de ella, hay viento muy fuerte impidiendo mi paso, empujando más fuerte empiezo a avanzar,</p>
-            </div>
-            <div class="page text-page" onclick="movePage(this, 14)">
-               <p>depende de mi mente que tanto avanzo, en esta nube que no muestra la verdad.</p>
-            </div>
-        
-            <div class="page text-page" onclick="movePage(this, 15)"></div>
-            <div class="page cover-back" onclick="movePage(this, 16)"></div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        <div class="contactmethods scrollreveal">
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=+573178886108&text=Hello%20CrisKop!%20I'm%20interested%20in%20your%20skills%20and%20I%20want%20more%20info%20on%20how%20I%20can%20get%20a%20website%20too!"><img src="./img/wtsplogo.png"/></a>
+        <a href="https://www.instagram.com/gold_cris__/" target="_blank"><img src="./img/iglogo.png" /></a>
         </div>
-          </section>
- 
-       <!--popup's close button-->
-       <div class="buttonspop">
-       <div class="instruction">Click al libro <br>(Si no funciona, click al boton "Fix")</div>
-       <button class="movilview moresize" type="button">Fix book</button>
-        <button class="close">Cerrar</button>   
+    </section>
+
+    <footer class="finalfooter">
+        CrisKop © 2023
+    </footer>
+
+
+
+    <section class="prevmovil">
+
+        <div class="pagina portada"></div>
+              
       </div>
-  </div>
-
-  <script>
-  
-    $(document).ready(function() {
-        var scrollPosition = 0;
-      
-        $(".open, .popup-overlay .open").on("click", function() {
-          scrollPosition = $(window).scrollTop(); // Guarda la posición actual del desplazamiento
-          $("body").addClass("popup-open"); // Agrega una clase al cuerpo para desactivar el desplazamiento
-          $(".popup-overlay, .popup-content").addClass("active");
-        });
-      
-        $(".close, .popup-overlay .close").on("click", function() {
-          $("body").removeClass("popup-open"); // Elimina la clase del cuerpo para habilitar el desplazamiento
-          $(window).scrollTop(scrollPosition); // Restaura la posición del desplazamiento
-          $(".popup-overlay, .popup-content").removeClass("active");
-        });
-      });
-
-      $(".movilview").on("click", function() {
-        scrollPosition = $(window).scrollTop(); // Guarda la posición actual del desplazamiento
-        $("body").addClass("popup-open"); // Agrega una clase al cuerpo para desactivar el desplazamiento
-        $(".prevmovil").css("display", "flex")
-        $(".popup-overlay, .popup-content").removeClass("active");
-      });
-
-      $(".movilviewc").on("click", function() {
-        $("body").removeClass("popup-open"); // Elimina la clase del cuerpo para habilitar el desplazamiento
-        $(window).scrollTop(scrollPosition); // Restaura la posición del desplazamiento
-        $(".prevmovil").css("display", "none")
-        $(".popup-overlay, .popup-content").removeClass("active");
-      });
-   
- 
+      <div class="pagina">
+          <br>
+         <h1>VI UNA CASCADA BRILLANTE</h1>
+         <h3>Cristian Orlando Sánchez Prince</h3>
+         <div>1</div>
+      </div>
     
-    </script>
-
-
-
+      <div class="pagina">
+          <h3>Capítulos.</h3>
+          <p>Brillo Dorado – Cap. 1</p>
+          <p>Interferencia – Cap. 2</p>
+          <p>Sin señal – Cap. 3</p>
+          <p>Vuelta al aire – Cap. 4</p>
+          <p>Cascada – Cap. 5</p>
+          <p>Prediciendo Luz – Cap. 6</p>
+          <p>Agüita pa’ despertar – Cap. 7</p>
+          <div>2</div>
     
+      </div>
+    
+    
+      <div class="pagina">
+          <h2>Brillo Dorado – Cap. 1</h2>
+          <p>“Te amo”, comienza la historia que en mi cabeza estuve imaginando por mucho tiempo, vi algo brillante estar en mi entorno, algo deslumbraba mis ojos para donde quiera que mire, volteo y sigo viendo su reflejo, no sé si mi mente se quedó con su manera de brillar o es que la estoy viendo a ella.</p>
+          <p>“Te amo”, ese color, esa esencia, ese brillo, lo empiezo a amar, a recordar y a ver a través de él algo muy hermoso, algo que siento que me va a faltar ver después.</p>
+          <p>“Te amo”, estoy convencido de amar esa vista, verla hace que mi corazón insista, caer otra vez en amor hace pensar a mi mente, no sé si de nuevo mi corazón resista esa mirada resplandeciente, siento que ya está lista toda la verdad sobre lo que siento al recibir ese brillo, muchas veces analizo y puede parecer sencillo, pero no lo es, son emociones combinadas contenidas, revoluciones de mariposas dando vueltas sobre mí, estrellas en este cielo que miro, que recuerdo, que admiro,</p>
+          <div>3</div>
+        </div>
+      <div class="pagina">
+          <p>que espero, que respiro y que hasta eso último me hace pensar en ella.</p>
+          <p>“¿Te amo?”, amo todo lo que he visto, poco he actuado, solo pienso en eso, pero no hago nada, talvez espere una oportunidad, aunque esto ya me ha salido mal antes.</p>
+          <p>A mi mente llegan recuerdos, recuerdos un poco traumáticos, me quitan la motivación para demostrar todo esto que siento, que pienso y hacerle notar lo mucho que me convenzo que le amo, capítulos llegan a mis recuerdos, pasado llega a mis encuentros, lloros llegan a mis pasatiempos, pero me debo contener, siento miedo de que vuelva a pasar lo mismo, aunque confío en todo lo que sé, sería un drama el no verme en esa meta que tan objetivamente observo.</p>
+          <p>Hace un buen tiempo, recuerdo rosas, felicidad pasando por ese lugar, ese recuerdo vuelve, y me llena la mente de ideas que podrían haber solucionado mi ansiedad en este momento si hubiera estado allá al estar acá ahora mismo.</p>
+          <div>4</div>
+        </div>
+      <div class="pagina">
+          <p>Pensando un poco en que hacer, mirando ese bonito atardecer, vi de nuevo ese brillo, ORO, se me vino a la mente, una joya que quisiera cuidar, una linda que quisiera amar, algo que quisiera que fuera real, pero solamente hice un saludo. Lloro por dentro, me siento como cuando estoy en el centro de una decepción sin final, me pongo nervioso, pero no se me nota, ni yo lo noto, pero posteriormente me doy cuenta que si fui y no me gusta, aunque en ese momento me gustó eso que hice que luego no me convencía.</p>
+          <p>Esa bella reina siempre junto a su princesa, su flamante y literalmente brillante mujer, pienso en un obstáculo relacionado para poder describirlo, una valla en un establo, una puerta en un castillo, un gato enjaulado en una especie de historia de fantasía feliz, una rana yendo a la velocidad de la luz en una rueda infinita, aunque mi otra sección, piensa en el contraste de la idea que lo obstaculiza, un atajo para llegar al destino, una llama azul que solo me ayuda en ese objetivo, una luz en un pasillo oscuro. Lo triste es que no lo puedo confirmar, mi mente sigue en un pensar infinito que no describe con exactitud lo que se supone que pienso.</p>
+          <div>5</div>
+        </div>
+      <div class="pagina">
+          <p>¿Puedo complementarme con esa princesa para llegar a la reina? No lo veo muy inteligente, pero parece que fueran imanes, no hay manera de ver oportunidad en donde las dos, no perciban lo que solo una debe llegar a ver. Un poco de pena, vergüenza sobre esto, no, ya me pasó antes y aseguro que no es así.</p>
+          <p>Dice mi mente que repetir algo que salió mal puede salir mal, pero si cambio las cosas a un ochenta por ciento de lo que me salió mal antes sé que saldrá bien.</p>
+          <p>Vuelvo a mi mundo, vuelvo a mi rutina, el tiempo ha pasado más rápido desde que me desprendí de ella, el tiempo me ha cegado, especialmente por esa vez no estar enfocado, mi vista vio su brillo desde casi el inicio de mi cambio en mi pensamiento, había observado los efectos que esa joya causó en mí, y lo ignoré, hice otras cosas y siento que no valieron la pena. </p>
+          <p>Desde el inicio convencido que mi otra meta iba a ser lograda y no fue así, me interpuso pensamientos de nuevo, un frío que se reinicia en mi contra, todo eso complementado de que, de hecho, había empezado a llover.</p>
+          <div>6</div>
+        </div>
+      <div class="pagina">
+          <p>Un girasol que veo girando desde hace mucho tiempo, sigue girando cuando no lo veo, yo giraba para verlo y ahora ese girasol no lo volví a ver girar, mirada perdida, callejón sin salida, y volví a ese lugar. Ese miedo tan escandaloso de no reiterar la observación de un lindo paisaje, aunque sea una flor la que determina el linaje de todo mi pensamiento, un cielo pintado un poco borroso, o eso percibo desde que el paisaje no lo acompaña, falta de motivación causada por decepción de hechos anteriores y actuales que me llevan a esta angustia a lo mejor un poco exagerada pero que tiene razón de ser.</p>
+          <p>Una vez me dijeron que nunca me rinda, nunca lo hice, pero no busqué alternativas para eso, dando lo máximo di lo mínimo por el límite que sin sentido alguno coloqué en mi red lógica. Empezando no hay alternativas, pero no se ha repasado el primer paso, aunque al final de todo, esto es una alternativa completa, y esa alternativa ahora es mi camino principal y destino por llegar.</p>
+          <p>“Te amo”, de nuevo lo repito, esta vez en negrilla de mi voz alzada, mi mente lo confirma, pero mi cuerpo no lo transmite, sigo sin progresar</p>
+          <div>7</div>
+        </div>
+      <div class="pagina">
+          <p>demasiado, sigo en un paso negativo en el orden, solo miro, y siento que no progreso, aseguro que esto es una alternativa, pero ni siquiera la estoy tomando, solo estoy asegurando haberla tomado.</p>
+          <p>Esto tiene similitud a una distracción más que a otro camino, pero la motivación que el camino principal se llevó, me hace afirmar eso, voy poco a poco avanzando sin progreso alguno.</p>
+          <p>Tomar de la mano pensamientos y ese pensamiento específico, mi alternativa a la tristeza, es efectivo solo y solo si los tomo al final de todo, no solo si admiro el buen resultado que puede llegar a tener, y solo eso. La alternativa que mis ojos vieron no se siente tan confiable para mi corazón, este derramó una gran cantidad hacia el camino principal, ese del cual no encuentro salida, está desmotivado, no sabe qué hacer y se tienta al ver esa joya, de comprarla recogiendo lo que ya derramó anteriormente. Mi mente y mi vista sienten lo mismo, debería tomarlo, pero mi corazón me lo impide.</p>
+          <p>Ese frío compuesto ahora es hielo, así de comprimido me siento en este valle de nieve, pero sin abrigo, nada para cubrirme, todo a la</p>
+          <div>8</div>
+        </div>
+      <div class="pagina">
+          <p>deriva, sin tomar iniciativa de salir en el contraste de la única puerta, me auto decepciono por verme sin pensamiento alguno, sin salida de esta oscuridad que me tiene inmerso en un mar lleno de desgracias y tristezas.</p>
+          <p>Empiezo a quitar esa nieve, planificando acciones, observando aviones y pensando como escapar, sin embargo, sigo inmerso en ese camino sin salida, o eso parece por su tremenda dificultad, debo esforzarme más.</p>
+          <p>Comienza la montaña rusa la cual me esperaba que iniciara después, cambio bipolar repentino que nubla mi vista, la deja lista para caer mucho más en ese agujero que ni yo conozco el destino que tiene. Rueda de la fortuna sin rotación en la cual estoy encerrado en la zona superior, aunque, sigo sin verlo, está demasiado nublado.</p>
+          <p>Empiezo a quedarme dormido, cegado por una granada, silenciado por un altavoz, inmóvil por fuerza divina, moviéndome por la neblina, pero sin realmente moverme fuera de ella, hay viento muy fuerte impidiendo mi paso, empujando más fuerte empiezo a avanzar,</p>
+          <div>9</div>
+        </div>
+      <div class="pagina">
+         <p>depende de mi mente que tanto avanzo, en esta nube que no muestra la verdad.</p>
+         <div>10</div>
+        </div>
+    
+      <div class="pagina contraportada"></div>
+      <button class="movilviewc">Cerrar</button> 
+      </section>
+
 </body>
 </html>
-
-
-<script>
-      
-  ScrollReveal({
-    reset: true,
-    distance: '60px',
-    duration: 1000,
-    delay: 50
-  })
-
-  ScrollReveal().reveal('.seccion', {origin: 'top'})
-  ScrollReveal().reveal('.scrollr', {origin: 'top'})
-
-
- 
-
-  
-</script>
+<script type="text/javascript" src="typing.js"></script>
+<script type="text/javascript" src="projects.js"></script>
+<script type="text/javascript" src="bookprev.js"></script>
+<script type="text/javascript" src="scrollreveal.js"></script>

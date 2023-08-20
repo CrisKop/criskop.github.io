@@ -1,4 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+.prevmovil{
+    z-index: 900;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    background: #faf2e2;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    top: 0;
+    display: none
+ 
+  }
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
@@ -7,141 +24,118 @@ $text-font: 'EB Garamond', serif;
 $h1-font: 'Lora', serif;
 $h2-font: 'EB Garamond', serif;
 
-$book-h-ratio: 7;
-$book-w-ratio: 5;
-$book-size: 90px;
-
-
-.instruction {
-    font-family: $text-font;
-    color: white;
-    background: #fff7;
-    border-radius: 15px;
-    padding: 10px 15px;
-  }
-
-
-.frag{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: fit-content;
-    max-width: 100vw;
+.buttonspop{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
+.instruction{
+  height: fit-content;
+  color: black !important;
+  max-width: 200px;
 
-
-.bookfrag {
-  width: $book-size * $book-w-ratio * 2;
-  height: $book-size * $book-h-ratio;
-  transform-style: preserve-3d;
 }
 
-.page {
-  width: $book-size * $book-w-ratio;
-  height: $book-size * $book-h-ratio;
-  background: #eee;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transition: transform 1s;
-  border-right: 1px solid black; /* Agregar línea negra entre páginas */
+.moresize{
+  padding: 40px !important;
 }
 
-@for $i from 1 through 100 {
-  .page:nth-child(#{$i}) {
-    @if $i % 2 == 1 {
-      padding: 5% 4% 4% 5%;
-      transform-origin: 0% 50%;
-      transform: translatez(-1px * $i);
-    } @else {
-      padding: 5% 5% 4% 4%;
-      transform-origin: 100% 50%;
-      transform: translatez(-1px * $i) scalex(-1) translatex(100%);
-    }
-    
-    @if $i > 2 {
-      @if $i % 20 < 10 {
-        background: #f5f5f5;
-      } @else {
-        background: #f5f5f5;
-      }
-    } @else {
-      background: #597d9e;
-    }
-  }
-  
-  .left-side:nth-child(#{$i}) {
-    
-    @if $i % 2 == 1 {
-      transform: translatez(1px * $i) rotatey(-180deg);
-    } @else {
-      transform: translatez(1px * $i) scalex(-1) translatex(100%) rotatey(180deg);
-    }
-  }
-}
-
-.cover-front:nth-child(1) {
+.portada {
   text-align: center;
   background: url('./img/viunacascadabrillante.png');
-  background-size: cover;
+  background-size: contain;
+  background-repeat:no-repeat;
 
 }
+.contraportada {
+  background: url('./img/contraportada.png');
+  background-size: contain;
+  background-repeat:no-repeat;
+}
+  .pagina{
 
-.cover-back:nth-last-child(1) {
-    background: url('./img/contraportada.png');
-    background-size: cover;
-  }
-
-
-
-.center{
+    border-top: 2px solid rgb(226, 205, 173);
+    max-width: 400px;
+    width: 100vw;
+    min-height: 700px;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-}
+    padding: 20px;
+    div{
+      align-self: center;
+      margin-bottom: 4%;
+      font-family: $text-font;
+      font-size: 15px;
+      color: black;
+    }
+     h1{
+      text-align: center;
+      margin-bottom: 4%;
+      font-family: $text-font;
+      font-size: 50px;
+      color: black;
+  }
+  
+  
 
-.page h1{
-    text-align: center;
+  
+  
+   h2{
+      margin-bottom: 4%;
+      font-family: $text-font;
+      font-size: 35px;
+      color: black;
+  }
+  
+   h3{
+      text-align: center;
+      margin-bottom: 4%;
+      font-family: $text-font;
+      font-size: 25px;
+      color: black;
+  }
+  
+   p {
     margin-bottom: 4%;
     font-family: $text-font;
-    font-size: 50px;
+    font-size: 18.2px;
     color: black;
-}
-
-.page h2{
-    margin-bottom: 4%;
-    font-family: $text-font;
-    font-size: 35px;
-    color: black;
-}
-
-.page h3{
-    text-align: center;
-    margin-bottom: 4%;
-    font-family: $text-font;
-    font-size: 25px;
-    color: black;
-}
-
-.page p {
-  margin-bottom: 4%;
-  font-family: $text-font;
-  font-size: 18.2px;
-  color: black;
-}
-
-.page:nth-child(3) {
-  p {
-    &:first-of-type {
-      &:first-letter {
-        font-size: 32px;
+  }
+  
+  &:nth-child(3) {
+    p {
+      &:first-of-type {
+        &:first-letter {
+          font-size: 32px;
+        }
       }
     }
   }
-}
+  }
 
-
-
-
+  .movilviewc{
+    position: fixed;
+      top: +1%;
+      right: +1%;
+      width: 25%;
+      height: 15%;
+      max-width: 120px;
+      max-height: 100px;
+      border: 0px;
+      padding: 10px;
+      font-size: 30px;
+      margin: 10px;
+      width: fit-content;
+      height: 50px;
+      border-radius: 10px;
+      border: 2px solid black;
+      background: rgba(255, 255, 255, 1);
+      &:hover{
+          background-color: black;
+          color: white;
+      }
+    }

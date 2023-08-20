@@ -1,0 +1,33 @@
+[
+    {
+        "img":"criskopcom.png",
+        "title":"CRISKOP.COM",
+        "description":"Personal page to let me know to the world, HELLO WORLD!",
+        "lenguages":"HTML, SCSS, JS",
+        "link":"https://criskop.com"
+    },
+
+    {
+        "img":"quesodash.png",
+        "title":"QUESO DASH PAGE",
+        "description":"A web app and discord bot for Queso Dash Community themed in Geometry Dash and with a Demon and Challenge lists",
+        "lenguages":"NODE, EJS, SCSS, JS",
+        "link":"https://quesodash.fun"
+    },
+
+    {
+        "img":"refuerzoicfes.png",
+        "title":"REFUERZO ICFES",
+        "description":"A web app for School pointing to the help of development of analysis skills for application of ICFES test",
+        "lenguages":"NODE, EJS, SCSS, JS",
+        "link":"https://icfes.quesodash.fun"
+    },
+
+    {
+        "img":"inventarioiti.png",
+        "title":"INVENTARIO ITI",
+        "description":"A web app for School pointing to organize all items in the school in a catalogue style",
+        "lenguages":"NODE, EJS, SCSS, JS",
+        "link":"https://inv.quesodash.fun"
+    }
+]
