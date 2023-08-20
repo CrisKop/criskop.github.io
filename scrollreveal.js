@@ -10,10 +10,3 @@ ScrollReveal({
   gsap.registerPlugin(ScrollTrigger);
 
 
-
-  function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-  }
-
-  requestAnimationFrame(raf)
