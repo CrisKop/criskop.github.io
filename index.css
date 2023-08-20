@@ -154,6 +154,7 @@ button, a {
   background: var(--bgmoretransparent);
   padding: 50px;
   border-radius: 30px;
+  max-width: 100vw;
 }
 .aboutme .parts .part1 .pfp {
   min-width: 300px;
@@ -221,6 +222,7 @@ button, a {
   background: var(--bgmoretransparent);
   padding: 50px;
   border-radius: 30px;
+  max-width: 100vw;
 }
 .section2 .buttons {
   display: flex;
