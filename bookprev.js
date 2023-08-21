@@ -24,7 +24,7 @@ $(document).ready(function() {
     });
   
     // Verifica si la URL contiene "#preview" al cargar la página
-    if (window.location.hash === "#preview") {
+    if (window.location.hash === "#libroprev") {
       scrollPosition = $(window).scrollTop();
       $(".prevmovil").css("display", "flex");
       $("body").addClass("popup-open");
