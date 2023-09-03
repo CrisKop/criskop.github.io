@@ -3,6 +3,7 @@
         "img":"criskopcom.png",
         "title":"CRISKOP.COM",
         "description":"Personal page to let me know to the world, HELLO WORLD!",
+        "descriptionEs":"Pagina personal para hacerme conocer al mundo, ¡HOLA MUNDO!",
         "lenguages":"HTML, SCSS, JS",
         "link":"https://criskop.com"
     },
@@ -10,7 +11,8 @@
     {
         "img":"quesodash.png",
         "title":"QUESO DASH PAGE",
-        "description":"A web app and discord bot for Queso Dash Community themed in Geometry Dash and with a Demon and Challenge lists",
+        "description":"Web app and discord bot for Queso Dash Community themed in Geometry Dash and with a Demon and Challenge lists",
+        "descriptionEs":"Aplicación web y bot de Discord para la comunidad Queso Dash de Geometry Dash, con listas de Demons y Challenges.",
         "lenguages":"NODE, EJS, SCSS, JS",
         "link":"https://quesodash.fun"
     },
@@ -18,7 +20,8 @@
     {
         "img":"refuerzoicfes.png",
         "title":"REFUERZO ICFES",
-        "description":"A web app for School pointing to the help of development of analysis skills for application of ICFES test",
+        "description":"Web app for School pointing to the help of development of analysis skills for application of ICFES test",
+        "descriptionEs":"Aplicación web de apoyo al desarrollo de habilidades para las pruebas ICFES en mi colegio.",
         "lenguages":"NODE, EJS, SCSS, JS",
         "link":"https://icfes.quesodash.fun"
     },
@@ -26,7 +29,8 @@
     {
         "img":"inventarioiti.png",
         "title":"INVENTARIO ITI",
-        "description":"A web app for School pointing to organize all items in the school in a catalogue style",
+        "description":"Web app for School pointing to organize all items in the school in a catalogue style",
+        "descriptionEs":"Aplicación web para mi colegio la cual apunta a la organización de sus elementos estilo catálogo",
         "lenguages":"NODE, EJS, SCSS, JS",
         "link":"https://inv.quesodash.fun"
     }

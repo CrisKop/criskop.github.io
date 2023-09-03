@@ -34,6 +34,82 @@ button, a {
   cursor: pointer;
 }
 
+.switch {
+  position: absolute;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.EN {
+  position: absolute;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  top: 4px;
+  left: 0%;
+  transform: translateX(-50%);
+}
+
+.ES {
+  position: absolute;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  top: 4px;
+  left: 170%;
+  transform: translateX(-50%);
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(115, 115, 115, 0.4745098039);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.slider:hover {
+  scale: 1.1;
+  filter: brightness(1.5) !important;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 5px;
+  bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.678);
+  transition: 0.4s;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.switch input:checked + .slider {
+  background-color: rgba(240, 255, 188, 0.6235294118);
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(30px);
+  background-color: rgba(0, 0, 0, 0.4588235294);
+}
+
 .section1 {
   width: max;
   height: 100vh;
@@ -421,6 +497,7 @@ button, a {
 }
 .contact .contactmethods a:hover {
   transform: scale(1.1);
+  filter: brightness(0.6);
 }
 
 .finalfooter {
@@ -460,8 +537,8 @@ a {
   height: 500px;
   border-radius: 50%;
   mix-blend-mode: lighten;
-  filter: blur(15px);
-  opacity: 0.025;
+  filter: blur(5px);
+  opacity: 0.01;
 }
 
 .shape1 {

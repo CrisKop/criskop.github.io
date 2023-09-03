@@ -26,6 +26,22 @@
         <div class="shape shape2"></div>
         <div class="shape shape3"></div>
       </div>
+
+
+      <label class="switch">
+
+        <p class="EN">EN</p>
+
+        <div class="checkbox">
+        <input type="checkbox" id="toggle-switch">
+        <span class="slider">
+
+        </span>
+
+        <p class="ES">ES</p>
+      </div>
+      </label>
+    </div>
     
 
     
@@ -49,14 +65,14 @@
     </section>
 
     <section class="botones">
-        <a href="#books" class="btn2">Books</a>
-        <a href="#experience" class="btn1">Experience</a>
+        <a href="#books" class="btn2" data-translate="Libros">Books</a>
+        <a href="#experience" class="btn1" data-translate="Experiencia">Experience</a>
     </section>
 
 </section>
 
 <section class="aboutme ">
-    <h1 class="scrollreveal" >ABOUT ME</h1>
+    <h1 class="scrollreveal" data-translate="SOBRE MI" >ABOUT ME</h1>
 
     <section class="parts scrollreveal">
 
@@ -70,17 +86,22 @@
 
         <div class="part2">
 
-            <h2>WHO IS CRISKOP?</h2>
+            <h2 data-translate="¿QUIÉN ES CRISKOP?">WHO IS CRISKOP?</h2>
 
             <div class="bio">
-            <p>Skilled full stack developer with focus on web developing, writing and learning more things.<br><br> CrisKop is:</p>
+            <p
+            data-translate="Es el desarrollador full stack enfocado en desarrollo web, escribir y aprender más cosas."
+            >Skilled full stack developer with focus on web developing, writing and learning more things.</p>
+            <br>
+            <p data-translate="CrisKop es:">CrisKop is:</p>
             </div>
+            
 
             <div class="desxd">
-            <li>THE developer of your choice</li>
-            <li>THE poetic writer with a outstanding skill</li>
-            <li>Advanced in design of web apps and pages</li>
-            <li>THE BEST OF THE BESTS</li>
+            <li data-translate="El desarrollador de tu elección">The developer of your choice</li>
+            <li data-translate="El escritor poético con una habilidad sobresaliente">The poetic writer with a outstanding skill</li>
+            <li data-translate="Experimentado en el desarrollo de aplicaciones y paginas web">Advanced in design of web apps and pages</li>
+            <li data-translate="EL MEJOR DE LOS MEJORES">THE BEST OF THE BESTS</li>
             </div>
 
         </div>
@@ -90,7 +111,7 @@
 
 <section id="books" class="section2 ">
         
-    <h1 class="scrollreveal">BOOKS</h1>
+    <h1 class="scrollreveal" data-translate="LIBROS">BOOKS</h1>
     <!-- Projects -->
     <section class="books scrollreveal">
 
@@ -121,9 +142,9 @@
           </div>
 
           <div class="buttons">
-            <button class="movilview" type="button">See a preview</button>
-            <button class="compra" onclick="window.open('https://a.co/d/berm1Bs', '_blank')" type="button">Buy! (Amazon)</button>
-            <button class="compra" onclick="window.open('https://api.whatsapp.com/send?phone=+573178886108&text=Hola%20Cris!%20Me%20interesa%20tu%20libro%20%22VI%20UNA%20CASCADA%20BRILLANTE%22,%20¿me%20podrías%20dar%20más%20información%20acerca%20de%20él?', '_blank')" type="button">Buy! (Colombia)</button>
+            <button class="movilview" type="button" data-translate="Vista Previa">See a preview</button>
+            <button class="compra" onclick="window.open('https://a.co/d/berm1Bs', '_blank')" type="button" data-translate="¡Comprar! (Amazon)">Buy! (Amazon)</button>
+            <button class="compra" onclick="window.open('https://api.whatsapp.com/send?phone=+573178886108&text=Hola%20Cris!%20Me%20interesa%20tu%20libro%20%22VI%20UNA%20CASCADA%20BRILLANTE%22,%20¿me%20podrías%20dar%20más%20información%20acerca%20de%20él?', '_blank')" type="button" data-translate="¡Comprar! (Colombia)">Buy! (Colombia)</button>
           </div>
         </div>
     </section>
@@ -134,7 +155,7 @@
 
     <section id="experience" class="section3">
         
-        <h1 class="scrollreveal" >EXPERIENCE</h1>
+        <h1 class="scrollreveal" data-translate="EXPERIENCIA" >EXPERIENCE</h1>
         <!-- Projects -->
         <section class="projects">
 
@@ -143,11 +164,11 @@
     </section>
 
     <section class="contact">
-        <h2>DO YOU WANT A WEB APP?</h2>
+        <h2 data-translate="¿QUIERES UNA PÁGINA WEB?">DO YOU WANT A WEB APP?</h2>
 
-        <h3>You can contact me here:</h3>
+        <h3 data-translate="PUEDES CONTACTARME AQUÍ:">You can contact me here:</h3>
 
-        <div class="contactmethods scrollreveal">
+        <div class="contactmethods">
         <a target="_blank" href="https://api.whatsapp.com/send?phone=+573178886108&text=Hello%20CrisKop!%20I'm%20interested%20in%20your%20skills%20and%20I%20want%20more%20info%20on%20how%20I%20can%20get%20a%20website%20too!"><img src="./img/wtsplogo.png"/></a>
         <a href="https://www.instagram.com/gold_cris__/" target="_blank"><img src="./img/iglogo.png" /></a>
         </div>
@@ -246,3 +267,4 @@
 <script type="text/javascript" src="projects.js"></script>
 <script type="text/javascript" src="bookprev.js"></script>
 <script type="text/javascript" src="scrollreveal.js"></script>
+<script type="text/javascript" src="language.js"></script>
