@@ -3,7 +3,7 @@
   --border: #bebfab;
   --borderhover: #dbdd78;
   --bgtransparent: #1f1f1b6b;
-  --bgmoretransparent: #2e2e2e46;
+  --bgmoretransparent: #79797924;
   --bglesstransparent: #1f1f1bb4;
   --primary: #f0ffbc;
   --primaryhover: rgba(219, 221, 120, 0.2);
@@ -22,6 +22,10 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+}
+
+.whoiscriskop[data-translate] {
+  text-align: left;
 }
 
 body {
@@ -44,7 +48,6 @@ button, a {
   transform: translateX(-50%);
   display: flex;
 }
-
 
 .EN {
   position: absolute;
@@ -375,6 +378,7 @@ button, a {
   justify-content: center;
 }
 .projects .project {
+  overflow: hidden;
   border: solid var(--border) 1px;
   color: var(--border);
   width: 350px;
@@ -442,6 +446,7 @@ button, a {
   color: white;
   flex-grow: 1;
   font-weight: 600;
+  border-radius: 10px;
 }
 .projects .project footer .buttons .btn:hover {
   background: var(--primaryhover);
