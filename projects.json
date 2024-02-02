@@ -1,4 +1,5 @@
 [
+    
     {
         "img":"criskopcom.png",
         "title":"CRISKOP.COM",
@@ -9,12 +10,21 @@
     },
 
     {
+        "img":"thedasher.png",
+        "title":"TheDasher",
+        "description":"Full stack MERN app for level upload for a game",
+        "descriptionEs":"Aplicación full stack del tipo MERN para la subida de niveles de un juego",
+        "lenguages":"NODE, REACT, TS, SCSS",
+        "link":"https://thedasher.criskop.com"
+    },
+
+    {
         "img":"quesodash.png",
         "title":"QUESO DASH PAGE",
         "description":"Web app and discord bot for Queso Dash Community themed in Geometry Dash and with a Demon and Challenge lists",
         "descriptionEs":"Aplicación web y bot de Discord para la comunidad Queso Dash de Geometry Dash, con listas de Demons y Challenges.",
         "lenguages":"NODE, EJS, SCSS, JS",
-        "link":"https://quesodash.fun"
+        "link":"https://quesodash.criskop.com"
     },
 
     {
@@ -23,7 +33,7 @@
         "description":"Web app for School pointing to the help of development of analysis skills for application of ICFES test",
         "descriptionEs":"Aplicación web de apoyo al desarrollo de habilidades para las pruebas ICFES en mi colegio.",
         "lenguages":"NODE, EJS, SCSS, JS",
-        "link":"https://icfes.quesodash.fun"
+        "link":"https://icfes.criskop.com"
     },
 
     {
@@ -32,6 +42,6 @@
         "description":"Web app for School pointing to organize all items in the school in a catalogue style",
         "descriptionEs":"Aplicación web para mi colegio la cual apunta a la organización de sus elementos estilo catálogo",
         "lenguages":"NODE, EJS, SCSS, JS",
-        "link":"https://inv.quesodash.fun"
+        "link":"https://inv.criskop.com"
     }
 ]
