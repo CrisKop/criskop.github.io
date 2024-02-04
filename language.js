@@ -27,7 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (fragment.includes('lang=en')){
-        cambiarIdiomaIngles();
+        cambiarIdioma();
+        setTimeout(cambiarIdiomaIngles(), 500)
+        
     }
   });
 // Función para cambiar el idioma a español
