@@ -25,6 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (fragment.includes('lang=es')){
         cambiarIdioma();
     }
+
+    if (fragment.includes('lang=en')){
+        cambiarIdiomaIngles();
+    }
   });
 // Función para cambiar el idioma a español
 function cambiarIdioma() {
