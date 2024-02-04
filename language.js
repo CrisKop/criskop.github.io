@@ -1,5 +1,31 @@
 const toggleSwitch = document.getElementById('toggle-switch');
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Obtener el fragmento de la URL
+    var fragment = window.location.hash;
+
+    // Verificar si el fragmento contiene la cadena "section=books&lang=es"
+    if (fragment.includes('s' || 'section')) {
+        // Obtener el nombre de la sección de la URL
+        var sectionName = fragment.split('=')[1].split('&')[0];
+    
+  
+        // Encontrar el elemento con el ID correspondiente a la sección
+        var idElement = document.getElementById(sectionName);
+  
+        if (idElement) {
+          idElement.scrollIntoView({
+            behavior: 'smooth' // Esto proporciona un desplazamiento suave
+          });
+  
+          // Puedes realizar acciones adicionales aquí después de desplazarte
+        }
+    }
+
+    if (fragment.includes('lang=es')){
+        cambiarIdioma();
+    }
+  });
 // Función para cambiar el idioma a español
 function cambiarIdioma() {
     const elementosATraducir = document.querySelectorAll('[data-translate]');
