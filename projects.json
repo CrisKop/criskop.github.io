@@ -10,6 +10,15 @@
     },
 
     {
+        "img":"juntosesmejor.png",
+        "title":"juntosesmejor.info",
+        "description":"Custom website for a client",
+        "descriptionEs":"Página web personalizada para un cliente",
+        "lenguages":"Astro",
+        "link":"https://juntosesmejor.info"
+    },
+
+    {
         "img":"thedasher.png",
         "title":"TheDasher",
         "description":"Full stack MERN app for level upload for a game",
