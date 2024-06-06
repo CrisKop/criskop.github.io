@@ -10,6 +10,15 @@
     },
 
     {
+        "img":"moonie.png",
+        "title":"Moonie | Chat App",
+        "description":"Web realtime chat with a lot of functions",
+        "descriptionEs":"Aplicacion web completa de chat en tiempo real con muchas funciones",
+        "lenguages":"NODE, REACT, TS, SCSS, TAILWIND, MONGODB, WEBSOCKETS",
+        "link":"https://chat.criskop.com"
+    },
+
+    {
         "img":"juntosesmejor.png",
         "title":"Juntos Es Mejor",
         "description":"Custom website for a client",
