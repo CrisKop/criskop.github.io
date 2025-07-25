@@ -22,6 +22,18 @@ function AboutMe() {
     if (window.innerWidth < 1250) {
       scrollValues = [0.375, 0.45, 0.5];
     }
+
+    if (window.innerWidth < 800) {
+      scrollValues = [0.4, 0.5, 0.6];
+    }
+
+    if (window.innerWidth < 600) {
+      scrollValues = [0.5, 0.6, 0.7];
+    }
+
+    if (window.innerWidth < 400) {
+      scrollValues = [0.6, 0.7, 0.8];
+    }
   }, []);
 
   useEffect(() => {
