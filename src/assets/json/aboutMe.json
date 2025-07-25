@@ -1,75 +1,75 @@
 [
-    {
-        "title":"Información Básica",
-        "paragraphs":[
-            {
-                "text":"Su nombre real es Cristian Prince, nació en Bogotá, Colombia y actualmente tiene 17 años."
-            },
-            {
-                "text":"Es un joven muy dedicado a sus gustos, entre ellos está la programación como principal."
-            },
-            {
-                "text":"Otros hobbies de Cris son la música, el canto, la poesía, las motos y el tenis de mesa."
-            }
-        ],
-        "image":"corona.webp"
-    },
+  {
+    "title": "Información Básica",
+    "paragraphs": [
+      {
+        "text": "Su nombre real es Cristian Prince, nació en Bogotá, Colombia y actualmente tiene 18 años."
+      },
+      {
+        "text": "Es un joven muy dedicado a sus gustos, entre ellos está la programación como principal."
+      },
+      {
+        "text": "Otros hobbies de Cris son la música, el canto, la poesía, las motos y el tenis de mesa."
+      }
+    ],
+    "image": "corona.webp"
+  },
 
-    {
-        "title":"Educación",
-        "paragraphs":[
-            {
-                "text":"SENA - Tecnólogo en Analisis y Desarrollo de Software",
-                "footer":"2024 - Actualidad",
-                "separator":true
-            },
-            {
-                "text":"SENA - Técnico en Sistemas",
-                "footer":"2022 - 2023",
-                "separator":true
-            },
-            {
-                "text":"Instituto Técnico Industrial 'L.P.N' - Bachillerato",
-                "footer":"2017 - 2023",
-                "separator":true
-            },
-            {
-                "text":"El Grillote - Primaria",
-                "footer":"2011 - 2016"
-            }
-        ],
-        "image":"education.webp"
-    },
+  {
+    "title": "Educación",
+    "paragraphs": [
+      {
+        "text": "SENA - Tecnólogo en Analisis y Desarrollo de Software",
+        "footer": "2024 - Actualidad",
+        "separator": true
+      },
+      {
+        "text": "SENA - Técnico en Sistemas",
+        "footer": "2022 - 2023",
+        "separator": true
+      },
+      {
+        "text": "Instituto Técnico Industrial 'L.P.N' - Bachillerato",
+        "footer": "2017 - 2023",
+        "separator": true
+      },
+      {
+        "text": "El Grillote - Primaria",
+        "footer": "2011 - 2016"
+      }
+    ],
+    "image": "education.webp"
+  },
 
-    {
-        "title":"¿Por qué programación?",
-        "paragraphs":[
-            {
-                "subtitle":"Inicio",
-                "text":"Desde los 8 años le ha gustado la tecnología y más que todo los juegos, inició en el mundo de la programación gracias a su curiosidad de niño y las ganas de crear ''su propio juego''."
-            },
-            {
-                "subtitle":"Motivación",
-                "text":"En 2016, se unió a la red social Discord, donde se interesó en crear un ''Bot'', una inteligencia artificial con órdenes y funciones para los usuarios de un servidor. Esto lo introdujo al desarrollo BackEnd, llevándolo eventualmente al desarrollo web en general."
-            },
-            {
-                "text":"Al descubrir su potencial como desarrollador web, se siente motivado por sus habilidades y su capacidad para ayudar a la sociedad creando herramientas útiles, aspirando a ser alguien ''diferente y innovador''."
-            }
-        ],
-        "image":"pregunta.webp"
-    },
-    {
-        "title":"",
-        "paragraphs":[
-            {
-                "subtitle":"Metas",
-                "text":"Su meta principal es sobresalir en su campo, siendo reconocido como creador y programador, así como fundador de ideas creativas y herramientas revolucionarias e innovadoras."
-            },
-            {
-                "subtitle":"Sueños",
-                "text":"Lograr el éxito como persona, tener libertad económica y sentirme satisfecho como persona."
-            }
-        ],
-        "image":"metas.webp"
-    }
+  {
+    "title": "¿Por qué programación?",
+    "paragraphs": [
+      {
+        "subtitle": "Inicio",
+        "text": "Desde los 8 años le ha gustado la tecnología y más que todo los juegos, inició en el mundo de la programación gracias a su curiosidad de niño y las ganas de crear ''su propio juego''."
+      },
+      {
+        "subtitle": "Motivación",
+        "text": "En 2016, se unió a la red social Discord, donde se interesó en crear un ''Bot'', una inteligencia artificial con órdenes y funciones para los usuarios de un servidor. Esto lo introdujo al desarrollo BackEnd, llevándolo eventualmente al desarrollo web en general."
+      },
+      {
+        "text": "Al descubrir su potencial como desarrollador web, se siente motivado por sus habilidades y su capacidad para ayudar a la sociedad creando herramientas útiles, aspirando a ser alguien ''diferente y innovador''."
+      }
+    ],
+    "image": "pregunta.webp"
+  },
+  {
+    "title": "",
+    "paragraphs": [
+      {
+        "subtitle": "Metas",
+        "text": "Su meta principal es sobresalir en su campo, siendo reconocido como creador y programador, así como fundador de ideas creativas y herramientas revolucionarias e innovadoras."
+      },
+      {
+        "subtitle": "Sueños",
+        "text": "Lograr el éxito como persona, tener libertad económica y sentirme satisfecho como persona."
+      }
+    ],
+    "image": "metas.webp"
+  }
 ]

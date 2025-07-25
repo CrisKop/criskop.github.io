@@ -115,7 +115,8 @@ function AboutMe() {
                       </p>
                       <p>
                         Especializado en el desarrollo web fullstack: BackEnd
-                        con Node.js y FrontEnd con React.js
+                        con Node.js en conjunto con TypeScript y FrontEnd con
+                        Astro o Nextjs
                       </p>
                     </motion.div>
                   )}
@@ -133,12 +134,13 @@ function AboutMe() {
                         <h1>PRÓXIMO ENFOQUE</h1>
                       </motion.div>
                       <p>
-                        El diseño web estético y las aplicaciones móviles son
-                        los dos enfoques actuales.
+                        Optimizar la calidad y velocidad de desarrollo
+                        unificando lenguajes para el stack completo de una app.
                       </p>
                       <p>
-                        La misión es mejorar la calidad de los proyectos a crear
-                        y maximizar su estética.
+                        La misión es mejorar la calidad de los proyectos a
+                        crear, hacerlos mas rápido y mejorar la experiencia de
+                        desarrollo colaborativa.
                       </p>
                     </motion.div>
                   )}
@@ -157,19 +159,16 @@ function AboutMe() {
                           <h1>APRENDIENDO</h1>
                         </div>
                         <p>
-                          <b>Framer Motion</b>
+                          <b>Nestjs</b>
                         </p>
                         <p>
-                          Herramienta que facilita la creación de animaciones en
-                          aplicaciones web.
+                          Herramienta que facilita la creación de backend con
+                          api REST.
                         </p>
                         <p>
-                          <b>React Native</b>
+                          <b>Scrum</b>
                         </p>
-                        <p>
-                          Extensión de React.js para crear aplicaciones móviles
-                          multiplataforma (Android e iOS)
-                        </p>
+                        <p>Metodología ágil de desarrollo de software.</p>
                       </motion.div>
                       <Link to={"/aboutme"}>
                         <motion.div
