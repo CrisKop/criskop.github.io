@@ -1,0 +1,160 @@
+[
+    {
+        "name":"Página Web",
+        "description":"Lo necesario para una página web completa",
+        "pros":[
+            {
+                "title":"Inversión inicial asequible",
+                "description":"Pagas el 30% y cuando esté terminado lo restante!"
+            },
+            {
+                "title":"Amigable con SEO",
+                "description":"Optimizado para motores de búsqueda para aumentar la visibilidad."
+            },
+            {
+                "title":"Diseño Personalizado",
+                "description": "Adaptado a tus necesidades y marca específicas."
+            },
+            {
+                "title":"Diseño Responsive",
+                "description":"Compatible con dispositivos móviles."
+            },
+            {
+                "title":"Secciones Animadas",
+                "description":"Animaciones llamativas para que resalte lo que quieres mostrar."
+            },
+            {
+                "title":"5 secciones",
+                "description":"5 rutas de tu página (por ejemplo /contacto, /sobremi...)"
+            },
+            {
+                "title":"Expandir servicio",
+                "description":"Puedes actualizar el contenido o agregar más"
+            }
+        ],
+        "price":"600.000",
+        "initialPrice":"180.000",
+        "usdPrice":"150",
+        "whatsappApiUrl":"https://api.whatsapp.com/send?phone=+573178886108&text=Hola%20Cristian,%20estaba%20viendo%20tu%20p%C3%A1gina%20y%20tambi%C3%A9n%20me%20interesa%20tener%20una%20propia,%20%C2%BFpuedo%20obtener%20m%C3%A1s%20informaci%C3%B3n%3F%20%C2%A1Gracias%21",
+        "more":false
+
+    },
+
+    {
+        "name":"Tienda Virtual",
+        "description":"Aplicación web para tu negocio u emprendimiento.",
+        "pros":[
+            {
+                "title":"Pedidos vía WhatsApp",
+                "description":"Notificacion de cuando alguien pide algo directamente a ti"
+            },
+            {
+                "title":"Cuentas de Clientes",
+                "description":"Cada cliente puede tener su cuenta propia y tener recomendaciones basadas en sus gustos"
+            },
+            {
+                "title":"Estadística de Ventas",
+                "description":"Herramientas de análisis para seguimiento de ventas y rendimiento de productos."
+            },
+            {
+                "title":"Promociones y Descuentos",
+                "description":"Capacidad para crear promociones y aplicar descuentos a productos específicos."
+            },
+            {
+                "title":"Gestión de Invenario",
+                "description":"Zona de administrador para poder agregar productos o servicios a gusto, totalmente personalizable."
+            },
+            {
+                "title":"Inversión inicial asequible",
+                "description":"Pagas el 30% y cuando esté terminado lo restante!"
+            },
+            {
+                "title":"Amigable con SEO",
+                "description":"Optimizado para motores de búsqueda para aumentar la visibilidad."
+            },
+            {
+                "title":"Diseño Personalizado",
+                "description": "Adaptado a tus necesidades y marca específicas."
+            },
+            {
+                "title":"Diseño Responsive",
+                "description":"Compatible con dispositivos móviles."
+            },
+            {
+                "title":"Secciones Animadas",
+                "description":"Animaciones llamativas para que resalte lo que quieres mostrar."
+            },
+            {
+                "title":"Expandir servicio",
+                "description":"Puedes actualizar el contenido o agregar más"
+            }
+        ],
+        "price":"2'000.000",
+        "initialPrice":"600.000",
+        "usdPrice":"500",
+        "whatsappApiUrl":"https://api.whatsapp.com/send?phone=+573178886108&text=Hola%20Cristian,%20estaba%20viendo%20tu%20p%C3%A1gina,%20me%20interesa%20tener%20una%20tienda%20virtual,%20%C2%BFpuedo%20obtener%20m%C3%A1s%20informaci%C3%B3n%3F%20%C2%A1Gracias%21",
+        "more":false
+
+    },
+
+    {
+        "name":"Aplicación Personalizada",
+        "description":"Aplicaciones diferentes más específicas para ti",
+        "pros":[
+            {
+                "title":"Costo Negociable",
+                "description":""
+            },
+            {
+                "title":"Totalmente Personalizable",
+                "description":"Al ser una aplicación diferente, puedo adaptarme a tus requerimientos."
+            },
+            {
+                "title":"Características Únicas",
+                "description":""
+            },
+            {
+                "title":"Escalabilidad a tu Idea",
+                "description":"Con una aplicación puedes hacer que tu idea o emprendimiento se expanda a lo digital de manera única"
+            },
+            {
+                "title":"Automatización de Procesos",
+                "description":"Automatiza tareas repetitivas para aumentar la eficiencia y reducir errores humanos."
+            },
+            {
+                "title":"Soporte Técnico Dedicado",
+                "description":"Acceso a soporte técnico especializado para resolver cualquier problema rápidamente."
+            },
+            {
+                "title":"Análisis y Reportes Personalizados",
+                "description":"Herramientas para generar reportes y análisis detallados según tus necesidades específicas."
+            },
+            {
+                "title":"Amigable con SEO",
+                "description":"Optimizado para motores de búsqueda para aumentar la visibilidad."
+            },
+            {
+                "title":"Diseño Personalizado",
+                "description": "Adaptado a tus necesidades y marca específicas."
+            },
+            {
+                "title":"Diseño Responsive",
+                "description":"Compatible con dispositivos móviles."
+            },
+            {
+                "title":"Secciones Animadas",
+                "description":"Animaciones llamativas para que resalte lo que quieres mostrar."
+            },
+            {
+                "title":"Expandir servicio",
+                "description":"Puedes actualizar el contenido o agregar más"
+            }
+        ],
+        "price":"variable",
+        "initialPrice":"variable",
+        "usdPrice":"variable",
+        "whatsappApiUrl":"https://api.whatsapp.com/send?phone=+573178886108&text=Hola%20Cristian,%20estaba%20viendo%20tu%20p%C3%A1gina,%20me%20interesa%20una%20aplicaci%C3%B3n%20personalizada,%20%C2%BFpuedo%20obtener%20m%C3%A1s%20informaci%C3%B3n%3F%20%C2%A1Gracias%21",
+        "more":true
+
+    }
+]

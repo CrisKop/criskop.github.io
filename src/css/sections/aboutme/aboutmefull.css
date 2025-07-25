@@ -1,0 +1,104 @@
+.aboutmefull-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-top: calc(4rem + 60px);
+}
+.aboutmefull-container .title {
+  z-index: 99;
+  text-align: center;
+  width: 100%;
+  background: var(--bg-opacity-300);
+}
+.aboutmefull-container .title h1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+.aboutmefull-container main {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20vh;
+  justify-content: center;
+  align-items: center;
+}
+.aboutmefull-container main .section {
+  min-height: 100vh;
+  min-height: 100dvh; /* For Safari */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 8rem 2rem;
+}
+.aboutmefull-container main .section:nth-child(even) {
+  background: var(--bg);
+  flex-direction: row-reverse;
+}
+.aboutmefull-container main .section:nth-child(odd) {
+  background: var(--background-gradient);
+}
+.aboutmefull-container main .section .content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow-y: scroll;
+  max-height: 70.8vh;
+}
+@media (max-width: 1250px) {
+  .aboutmefull-container main .section .content {
+    overflow-y: scroll;
+    max-height: 34.8vh;
+  }
+}
+.aboutmefull-container main .section .content .textcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.aboutmefull-container main .section .content h1 {
+  font-size: 2.5rem;
+  word-wrap: break-word;
+  max-width: clamp(0px, 600px, 80vw);
+}
+.aboutmefull-container main .section .content h2 {
+  font-size: 1.5rem;
+  word-wrap: break-word;
+  max-width: clamp(0px, 600px, 80vw);
+  color: var(--text-color-less);
+}
+.aboutmefull-container main .section .content p {
+  font-weight: 500;
+  color: var(--border);
+  font-size: x-large;
+  max-width: clamp(0px, 600px, 80vw);
+}
+.aboutmefull-container main .section .content hr {
+  color: var(--text-color-less);
+  opacity: 0.25;
+}
+.aboutmefull-container main .section .content small {
+  font-size: 1rem;
+  color: var(--text-color-less-2);
+}
+.aboutmefull-container main .section .image {
+  width: 90%;
+  min-width: 300px;
+  max-width: 500px;
+  height: auto;
+}
+.aboutmefull-container main .section .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=aboutmefull.css.map */

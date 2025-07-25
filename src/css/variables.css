@@ -1,0 +1,61 @@
+:root {
+  --bg: #1f1f1b;
+  --bg-opacity-500: rgba(31, 31, 27, 0.5);
+  --bg-opacity-300: rgba(31, 31, 27, 0.3);
+  --background-color: var(--bg);
+  --background-gradient: linear-gradient(45deg, #1e2a31, #354a55);
+  --font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --text-color: white;
+  --dark-text-color: black;
+  --text-color-less: rgb(180, 180, 180);
+  --text-color-less-2: rgb(112, 112, 112);
+  --border: #bebfab;
+  --border-2: rgba(255, 255, 255, 0.1);
+  --borderhover: #dbdd78;
+  --bgtransparent: #1f1f1b6b;
+  --dark-container-opacity-50: rgba(255, 255, 255, 0.02);
+  --bgmoretransparent: #ffffff08;
+  --bglesstransparent: #1f1f1bb4;
+  --primary: #f0ffbc;
+  --primary-text: #423c1a;
+  --primary-opacity-500: rgba(240, 255, 188, 0.5);
+  --primaryhover: rgba(219, 221, 120, 0.2);
+  --primarydarker: #909970;
+  --secundary: #bcfffc;
+  --third: #cccbcb;
+  --containerbg: #41414162;
+  --containerbghover: rgba(221, 219, 120, 0.05);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  color: var(--text-color);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+  min-height: 100dvh;
+  width: 100dvw;
+  background: var(--background-color);
+  background: var(--background-gradient);
+  overflow-x: hidden;
+}
+
+.allcontainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+a {
+  text-decoration: none;
+}

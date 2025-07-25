@@ -1,0 +1,141 @@
+.experience-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  width: 100vw;
+  height: fit-content;
+
+  .title {
+    text-align: center;
+    width: 100%;
+    background: var(--bg-opacity-300);
+    h1 {
+      font-size: 4rem;
+      font-weight: 600;
+    }
+  }
+
+  .projects {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .projects-see-more{
+    padding: 1rem;
+    font-size: x-large;
+    align-content: center;
+    text-align: center;
+    flex-basis: 100% !important;
+    border: solid 1px rgba(255, 255, 255, 0.103);
+  }
+
+  .project {
+    position: relative;
+    display: flex;
+    background: var(--bgmoretransparent);
+    backdrop-filter: blur(20px);
+    border-radius: 1rem;
+    overflow: hidden;
+    max-height: 400px;
+    gap: 1rem;
+    flex-basis: 20%; /* 25/100 del ancho del contenedor */
+    flex-grow: 1;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 95vw !important;
+    cursor: pointer;
+
+    &:hover > header img{
+        transform: scale(1.2);
+    }
+
+    &:hover {
+        filter: brightness(90%);
+        box-shadow: 0px 0px 50px 7px rgba(255, 255, 255, 0.3);
+    }
+
+    header {
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: cover; /* Ajusta la imagen para que cubra el contenedor */
+        transition: transform .2s;
+    }
+    }
+
+
+
+    main {
+      position: relative;
+      flex-grow: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+        gap: 1rem;
+
+      .cardtitle {
+        height: calc(50px - 1rem);
+        max-width: 90%;
+        align-content: center;
+        h1{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-weight: 600;
+                font-size: xx-large;
+            }
+      }
+
+      .carddescription{
+        height: calc(40% - 1rem);
+        max-width: 90%;
+        
+        p{
+            color: var(--text-color-less);
+            font-size: large;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+      }
+
+      .languages{
+        min-height: 42px;
+        margin-bottom: 1rem;
+        align-content: center;
+        max-width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        h2{
+            font-size: 1.25rem;
+            font-weight: 500;
+            text-align: center;
+
+        }
+
+        h4{
+            text-align: center;
+            font-weight: 500;
+        }
+      }
+    }
+  }
+
+ 
+
+
+}

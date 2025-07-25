@@ -1,0 +1,6 @@
+.progress-bar {
+  transform-origin: 0%;
+  width: 100vw;
+  height: 1px;
+  background: var(--primary);
+}/*# sourceMappingURL=scrollProgress.css.map */

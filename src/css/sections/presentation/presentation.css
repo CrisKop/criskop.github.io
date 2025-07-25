@@ -1,0 +1,58 @@
+@media (max-width: 800px) {
+  .presentation-container .presentation {
+    height: 55vh;
+  }
+}
+.presentation-container {
+  width: 100vw;
+  padding-top: calc(4rem + 60px);
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.presentation .corona {
+  min-width: 150px;
+  width: 15vw;
+  min-height: 120px;
+  height: 12vw;
+  margin-bottom: -2vw;
+}
+.presentation .name {
+  margin-top: 1vw;
+}
+.presentation .name .title {
+  font-size: calc(40px + 7vw);
+}
+.presentation .description {
+  margin-top: -1vw;
+}
+.presentation .description .typing-effect {
+  font-size: calc(10px + 1vw);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #333;
+}
+.presentation .description #cursor {
+  animation: cursor-blink 0.8s infinite;
+}
+@keyframes cursor-blink {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=presentation.css.map */

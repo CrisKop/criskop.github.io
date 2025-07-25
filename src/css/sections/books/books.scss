@@ -1,0 +1,48 @@
+.books-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  width: 100vw;
+  height: fit-content;
+
+  .title {
+    text-align: center;
+    width: 100%;
+    background: var(--bg-opacity-300);
+    h1 {
+      font-size: 4rem;
+      font-weight: 600;
+    }
+  }
+
+  .paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+
+    h1 {
+      font-size: 3rem;
+      word-wrap: break-word;
+      max-width: clamp(0px, 600px, 90vw);
+    }
+    p {
+      font-weight: 500;
+      color: var(--border);
+      font-size: x-large;
+      max-width: clamp(0px, 600px, 90vw);
+    }
+  }
+
+  .listcontainer{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    overflow: hidden;
+  }
+}
