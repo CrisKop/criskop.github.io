@@ -81,17 +81,17 @@ function Nav() {
   }, [location.pathname, tabs]);
 
   const [toggledNav, setToggledNav] = useState(false); // Iniciar como false para que inicialmente esté cerrado
-  const [isMobileWidth, setIsMobileWidth] = useState(false)
+  const [isMobileWidth, setIsMobileWidth] = useState(false);
   const buttonsRef = useRef(null);
   const navTogglerRef = useRef(null);
 
   useEffect(() => {
-    if(windowWidth < 800){
-      setIsMobileWidth(true)
+    if (windowWidth < 800) {
+      setIsMobileWidth(true);
     } else {
-      setIsMobileWidth(false)
+      setIsMobileWidth(false);
     }
-  }, [windowWidth])
+  }, [windowWidth]);
 
   const handleNavToggle = () => {
     setToggledNav(!toggledNav); // Alternar el estado al hacer clic en el icono
@@ -120,7 +120,7 @@ function Nav() {
             className="buttons"
             variants={buttonsContainer}
             initial="exit"
-            animate={(toggledNav || !isMobileWidth) ? "show" : "exit"} // Animar según el estado de toggledNav
+            animate={toggledNav || !isMobileWidth ? "show" : "exit"} // Animar según el estado de toggledNav
             exit="exit"
           >
             {tabs.map((tab) => (
@@ -209,7 +209,7 @@ function Nav() {
               <Link
                 onClick={() => {
                   handleButtonRedirectClick(
-                    "https://www.instagram.com/gold_cris__/"
+                    "https://www.instagram.com/cristian__prince/"
                   );
                 }}
               >
@@ -264,9 +264,7 @@ function Nav() {
             >
               <Link
                 onClick={() => {
-                  handleButtonRedirectClick(
-                    "https://discord.gg/TwbQNWGFAy"
-                  );
+                  handleButtonRedirectClick("https://discord.gg/TwbQNWGFAy");
                 }}
               >
                 <i className="ri-discord-fill"></i>
