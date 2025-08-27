@@ -10,6 +10,15 @@
   },
 
   {
+    "img": "zapcut.webp",
+    "title": "ZapCut | Acortador de Links",
+    "description": "Full stack web app to shorten links",
+    "descriptionEs": "Aplicacion web full stack para acortar Links",
+    "lenguages": "MONGODB, NEXT, TS, TAILWIND",
+    "link": "https://zap.criskop.com"
+  },
+
+  {
     "img": "micryptovisa.webp",
     "title": "Mi Crypto Visa",
     "description": "Web app for a client to manage referral links to a digital business",
