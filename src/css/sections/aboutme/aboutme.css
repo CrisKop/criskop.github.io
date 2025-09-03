@@ -1,107 +1,235 @@
-.aboutme-container {
+.aboutme-mini {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4rem;
   width: 100vw;
-  height: 175vh;
-  min-height: 2800px;
+  height: -moz-fit-content;
+  height: fit-content;
 }
-.aboutme-container .title {
-  z-index: 1;
-  top: 60px;
+.aboutme-mini .title {
   text-align: center;
   width: 100%;
   background: var(--bg-opacity-300);
 }
-.aboutme-container .title h1 {
+.aboutme-mini .title h1 {
   font-size: 4rem;
   font-weight: 600;
 }
-.aboutme-container .mainpart {
-  position: sticky;
-  top: 145px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-}
-.aboutme-container .mainpart .informacion {
-  width: 60vw;
-  min-width: 500px;
+.aboutme-mini .content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-.aboutme-container .mainpart .informacion .main {
-  height: calc(100vh - 60px - 85px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 4rem;
+  width: 80%;
 }
-.aboutme-container .mainpart .informacion .main .fragmento {
+.aboutme-mini .aboutme-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+  padding: 2rem;
+}
+.aboutme-mini .aboutme-card .top-section {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+}
+.aboutme-mini .aboutme-card .bottom-section {
+  display: flex;
   gap: 2rem;
 }
-.aboutme-container .mainpart .informacion .main .fragmento .titulo h1 {
-  font-size: 3rem;
-  word-wrap: break-word;
+.aboutme-mini .aboutme-card .image-section {
+  text-align: center;
+  flex-shrink: 0;
 }
-.aboutme-container .mainpart .informacion .main .fragmento p {
-  font-weight: 500;
-  color: var(--border);
-  font-size: x-large;
-  max-width: 450px;
-}
-.aboutme-container .mainpart .informacion .main .sabermas {
-  padding: 1rem;
-  background: var(--primary);
-  color: var(--bg);
-  border-radius: 1rem;
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-.aboutme-container .mainpart .informacion .main .sabermas:hover {
-  background: var(--primary-opacity-500);
-}
-.aboutme-container .mainpart .foto {
-  width: 40vw;
-  min-width: 500px;
-  overflow: hidden;
-  max-height: 100%;
-}
-.aboutme-container .mainpart .foto img {
-  width: 100%;
-  height: 100%;
+.aboutme-mini .aboutme-card .image-section img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
 }
-
-@media (max-width: 1251px) {
-  .aboutme-container .mainpart {
-    overflow: hidden;
-    width: 100vw;
+.aboutme-mini .aboutme-card .image-section .profile-info h3 {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+.aboutme-mini .aboutme-card .image-section .profile-info p {
+  color: var(--primary);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+  opacity: 0.9;
+}
+.aboutme-mini .aboutme-card .who-is-criskop {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.aboutme-mini .aboutme-card .info-content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.aboutme-mini .aboutme-card .fragment {
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  background: var(--dark-container-opacity-50);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  flex: 1;
+}
+.aboutme-mini .aboutme-card .fragment:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+}
+.aboutme-mini .aboutme-card .fragment h2 {
+  color: var(--text-color);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.aboutme-mini .aboutme-card .fragment p {
+  color: var(--text-color-less);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.aboutme-mini .aboutme-card .fragment .learning-item {
+  margin-bottom: 1.5rem;
+}
+.aboutme-mini .aboutme-card .fragment .learning-item h3 {
+  color: var(--primary);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.aboutme-mini .aboutme-card .fragment .learning-item p {
+  margin-bottom: 0;
+}
+.aboutme-mini .aboutme-card .buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.aboutme-mini .aboutme-card .buttons .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  min-width: 200px;
+}
+.aboutme-mini .aboutme-card .buttons .button.primary {
+  background: var(--primary);
+  color: var(--bg);
+}
+.aboutme-mini .aboutme-card .buttons .button.primary:hover {
+  background: var(--primary-opacity-500);
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  .aboutme-mini {
+    gap: 2rem;
   }
-  .aboutme-container .mainpart .informacion {
-    min-width: 0 !important;
+  .aboutme-mini .title h1 {
+    font-size: 2rem;
   }
-  .aboutme-container .mainpart .foto {
-    width: 100vw !important;
-    height: 100vh !important;
-    max-height: none !important;
-    position: absolute !important;
-    top: 0;
-    z-index: -1;
-    border-radius: 0 !important;
-    filter: brightness(30%);
+  .aboutme-mini .content {
+    gap: 2rem;
+    width: 90%;
+  }
+  .aboutme-mini .aboutme-card {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  .aboutme-mini .aboutme-card .top-section {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .aboutme-mini .aboutme-card .bottom-section {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .aboutme-mini .aboutme-card .image-section img {
+    width: 150px;
+    height: 150px;
+  }
+  .aboutme-mini .aboutme-card .image-section .profile-info h3 {
+    font-size: 1.3rem;
+  }
+  .aboutme-mini .aboutme-card .image-section .profile-info p {
+    font-size: 1rem;
+  }
+  .aboutme-mini .aboutme-card .fragment {
+    padding: 1rem;
+    background: var(--dark-container-opacity-50);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+  .aboutme-mini .aboutme-card .fragment:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+  .aboutme-mini .aboutme-card .fragment h2 {
+    font-size: 1.2rem;
+  }
+  .aboutme-mini .aboutme-card .buttons .button {
+    min-width: 150px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 769px) {
+  .aboutme-mini .aboutme-card {
+    gap: 3rem;
+    padding: 2.5rem;
+  }
+  .aboutme-mini .aboutme-card .top-section {
+    flex-direction: row;
+    gap: 3rem;
+    align-items: stretch;
+  }
+  .aboutme-mini .aboutme-card .bottom-section {
+    flex-direction: row;
+    gap: 3rem;
+  }
+  .aboutme-mini .aboutme-card .image-section {
+    flex-shrink: 0;
+  }
+  .aboutme-mini .aboutme-card .image-section img {
+    width: 250px;
+    height: 250px;
+  }
+  .aboutme-mini .aboutme-card .image-section .profile-info h3 {
+    font-size: 1.6rem;
+  }
+  .aboutme-mini .aboutme-card .image-section .profile-info p {
+    font-size: 1.2rem;
+  }
+  .aboutme-mini .aboutme-card .fragment {
+    padding: 1.8rem;
+    background: var(--dark-container-opacity-50);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+  .aboutme-mini .aboutme-card .fragment:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+  .aboutme-mini .aboutme-card .fragment h2 {
+    font-size: 1.4rem;
   }
 }/*# sourceMappingURL=aboutme.css.map */

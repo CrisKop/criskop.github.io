@@ -2,8 +2,28 @@ import React from "react";
 import "../../../css/sections/aboutme/aboutmefull.css";
 import aboutMeSections from "../../../assets/json/aboutMe.json";
 import { motion } from "framer-motion";
+import { getCristianAge } from "../../../utils/ageCalculator";
 
 function AboutMe() {
+  // Procesar las secciones para reemplazar la edad dinámica
+  const processedSections = aboutMeSections.map(section => {
+    if (section.title === "Información Básica") {
+      return {
+        ...section,
+        paragraphs: section.paragraphs.map(paragraph => {
+          if (paragraph.text.includes("actualmente tiene")) {
+            return {
+              ...paragraph,
+              text: paragraph.text.replace(/actualmente tiene \d+ años/, `actualmente tiene ${getCristianAge()} años`)
+            };
+          }
+          return paragraph;
+        })
+      };
+    }
+    return section;
+  });
+
   const sectionAnimation = {
     start: {
       y: 200,
@@ -42,13 +62,13 @@ function AboutMe() {
         </header>
 
         <motion.main>
-          {aboutMeSections.map((section, n) => {
+          {processedSections.map((section, n) => {
             //#region MAP SECTIONS
             return (
               <>
                 <motion.section
                   className="section"
-                  style={{ zIndex: n }}
+                  key={n}
                   variants={sectionAnimation}
                   initial="start"
                   animate={"show"}
@@ -70,11 +90,11 @@ function AboutMe() {
                       {section.title.toUpperCase()}
                     </motion.h1>
 
-                    {section.paragraphs.map((p) => {
+                    {section.paragraphs.map((p, index) => {
                       return (
-                        <>
+                        <React.Fragment key={index}>
                           {p.subtitle && (
-                            <>
+                            <React.Fragment>
                               <motion.h2
                                 variants={sectionAnimation}
                                 initial={{ opacity: 0, y: 200 }}
@@ -83,7 +103,7 @@ function AboutMe() {
                               >
                                 {p.subtitle}
                               </motion.h2>
-                            </>
+                            </React.Fragment>
                           )}
 
                           <motion.div className="textcontainer">
@@ -96,7 +116,7 @@ function AboutMe() {
                               {p.text}
                             </motion.p>
                             {p.footer && (
-                              <>
+                              <React.Fragment>
                                 <motion.small
                                   variants={sectionAnimation}
                                   initial={{ opacity: 0, y: 200 }}
@@ -105,21 +125,21 @@ function AboutMe() {
                                 >
                                   {p.footer}
                                 </motion.small>
-                              </>
+                              </React.Fragment>
                             )}
                           </motion.div>
 
                           {p.separator && (
-                            <>
+                            <React.Fragment>
                               <motion.hr
                                 variants={sectionAnimation}
                                 initial={{ opacity: 0, y: 200 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 1 }}
                               />
-                            </>
+                            </React.Fragment>
                           )}
-                        </>
+                        </React.Fragment>
                       );
                     })}
                   </motion.div>

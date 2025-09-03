@@ -1,124 +1,283 @@
-.aboutme-container {
+.aboutme-mini {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4rem;
   width: 100vw;
-  height: 175vh;
-  min-height: 2800px;
+  height: fit-content;
 
   .title {
-    z-index: 1;
-    top: 60px;
     text-align: center;
     width: 100%;
     background: var(--bg-opacity-300);
+
     h1 {
       font-size: 4rem;
       font-weight: 600;
     }
   }
 
-  .mainpart {
-    position: sticky;
-    top: calc(60px + 85px);
+  .content {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 80vh;
+    gap: 4rem;
+    width: 80%;
+  }
 
-    .informacion {
-      width: 60vw;
-      min-width: 500px;
+  .aboutme-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1000px;
+    padding: 2rem;
+
+    .top-section {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       gap: 2rem;
+      align-items: stretch;
+    }
 
-      
-      .main {
-          height: calc(100vh - 60px - 85px);
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          gap: 4rem;
-          
-          .fragmento{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            .titulo {
-                h1 {
-                  font-size: 3rem;
-                  word-wrap: break-word;
-                }
-              }
-              
-            p {
-              font-weight: 500;
-              color: var(--border);
-              font-size: x-large;
-              max-width: 450px;
-            }
+    .bottom-section {
+      display: flex;
+      gap: 2rem;
+    }
 
-          }
+    .image-section {
+      text-align: center;
+      flex-shrink: 0;
 
-          .sabermas{
-            padding: 1rem;
-            background: var(--primary);
-            color: var(--bg);
-            border-radius: 1rem;
-            font-weight: 700;
-            font-size: 1.2rem;
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        margin-bottom: 1rem;
+      }
 
-            &:hover{
-                background: var(--primary-opacity-500);
-            }
-          }
+      .profile-info {
+        h3 {
+          color: var(--text-color);
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin: 0 0 0.5rem 0;
+        }
+
+        p {
+          color: var(--primary);
+          font-size: 1.1rem;
+          font-weight: 500;
+          margin: 0;
+          opacity: 0.9;
+        }
       }
     }
 
-    .foto {
-      width: 40vw;
-      min-width: 500px;
-      overflow: hidden;
-      max-height: 100%;
+    .who-is-criskop {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
 
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    .info-content {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .fragment {
+      padding: 1.5rem;
+      border-radius: 0.8rem;
+      background: var(--dark-container-opacity-50);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      flex: 1;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      h2 {
+        color: var(--text-color);
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        color: var(--text-color-less);
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+
+      .learning-item {
+        margin-bottom: 1.5rem;
+
+        h3 {
+          color: var(--primary);
+          font-size: 1.2rem;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+
+      .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: none;
+        min-width: 200px;
+
+        &.primary {
+          background: var(--primary);
+          color: var(--bg);
+
+          &:hover {
+            background: var(--primary-opacity-500);
+            transform: translateY(-2px);
+          }
+        }
       }
     }
   }
-}
 
+  @media (max-width: 768px) {
+    gap: 2rem;
 
-@media (max-width: 1251px) {
-    .aboutme-container{
-        .mainpart{
-            overflow: hidden;
-            width: 100vw;
-            .informacion{
-                min-width: 0 !important;
-            }
-
-            .foto{
-                width: 100vw !important;
-                height: 100vh !important;
-                max-height: none !important;
-                position: absolute !important;
-                top: 0;
-                z-index: -1;
-                border-radius: 0 !important;
-                filter: brightness(30%);
-            }
-        }
+    .title h1 {
+      font-size: 2rem;
     }
+
+    .content {
+      gap: 2rem;
+      width: 90%;
+    }
+
+    .aboutme-card {
+      padding: 1.5rem;
+      gap: 1.5rem;
+
+      .top-section {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .bottom-section {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .image-section {
+        img {
+          width: 150px;
+          height: 150px;
+        }
+
+        .profile-info {
+          h3 {
+            font-size: 1.3rem;
+          }
+
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .fragment {
+        padding: 1rem;
+        background: var(--dark-container-opacity-50);
+        backdrop-filter: blur(10px);
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.08);
+        }
+
+        h2 {
+          font-size: 1.2rem;
+        }
+      }
+
+      .buttons {
+        .button {
+          min-width: 150px;
+          padding: 0.8rem 1.5rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 769px) {
+    .aboutme-card {
+      gap: 3rem;
+      padding: 2.5rem;
+
+      .top-section {
+        flex-direction: row;
+        gap: 3rem;
+        align-items: stretch;
+      }
+
+      .bottom-section {
+        flex-direction: row;
+        gap: 3rem;
+      }
+
+      .image-section {
+        flex-shrink: 0;
+
+        img {
+          width: 250px;
+          height: 250px;
+        }
+
+        .profile-info {
+          h3 {
+            font-size: 1.6rem;
+          }
+
+          p {
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      .fragment {
+        padding: 1.8rem;
+        background: var(--dark-container-opacity-50);
+        backdrop-filter: blur(10px);
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.08);
+        }
+
+        h2 {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
 }
