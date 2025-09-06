@@ -29,6 +29,7 @@ function Nav() {
 
   const tabs = [
     { name: "Inicio", href: "/" },
+    { name: "Servicios", href: "https://services.criskop.com", external: true, badge: "nuevo" },
     { name: "Proyectos", href: "/projects" },
     { name: "Sobre Mi", href: "/aboutme" },
     { name: "Libros", href: "/books" },
@@ -140,25 +141,66 @@ function Nav() {
                   },
                 }}
               >
-                <Link
-                  to={tab.href}
-                  onClick={() => {
-                    TabOnClick(tab);
-                  }}
-                  className="button"
-                >
-                  <p>{tab.name}</p>
-                  {selectedTab === tab.name && (
-                    <motion.div
-                      layoutId="navunderline"
-                      transition={{
-                        duration: 0.2,
-                        ease: "easeInOut",
-                      }}
-                      className="underline"
-                    />
-                  )}
-                </Link>
+                {tab.external ? (
+                  <a
+                    href={tab.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => {
+                      TabOnClick(tab);
+                    }}
+                    className="button"
+                  >
+                    <div style={{ position: 'relative', display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
+                      <p style={{ margin: 0 }}>{tab.name}</p>
+                      {tab.badge && (
+                        <span style={{
+                          backgroundColor: 'var(--primary)',
+                          color: 'var(--bg)',
+                          fontSize: '0.6rem',
+                          padding: '0.15rem 0.4rem',
+                          borderRadius: '0.8rem',
+                          fontWeight: 'bold',
+                          textTransform: 'uppercase',
+                          whiteSpace: 'nowrap',
+                          lineHeight: '1'
+                        }}>
+                          {tab.badge}
+                        </span>
+                      )}
+                    </div>
+                    {selectedTab === tab.name && (
+                      <motion.div
+                        layoutId="navunderline"
+                        transition={{
+                          duration: 0.2,
+                          ease: "easeInOut",
+                        }}
+                        className="underline"
+                      />
+                    )}
+                  </a>
+                ) : (
+                  <Link
+                    to={tab.href}
+                    onClick={() => {
+                      TabOnClick(tab);
+                    }}
+                    className="button"
+                  >
+                    <p>{tab.name}</p>
+                    {selectedTab === tab.name && (
+                      <motion.div
+                        layoutId="navunderline"
+                        transition={{
+                          duration: 0.2,
+                          ease: "easeInOut",
+                        }}
+                        className="underline"
+                      />
+                    )}
+                  </Link>
+                )}
               </motion.div>
             ))}
 

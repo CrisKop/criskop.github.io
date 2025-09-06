@@ -196,6 +196,62 @@ function Contact({ isPreview }) {
           >
             Cuéntame sobre tu idea y trabajemos juntos para hacerla realidad
           </motion.p>
+          <motion.p
+            variants={sectionAnimation}
+            initial={{ opacity: 0, y: 50 }}
+            animate={animationStarted ? { opacity: 1, y: 0 } : { opacity: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+          >
+            ¿Quieres saber un poco más?
+          </motion.p>
+          <motion.a
+            href="https://services.criskop.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="services-button"
+            variants={sectionAnimation}
+            initial={{ opacity: 0, y: 50 }}
+            animate={animationStarted ? { opacity: 1, y: 0 } : { opacity: 0 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              padding: "1rem 2rem",
+              background: "var(--primary)",
+              color: "var(--bg)",
+              textDecoration: "none",
+              borderRadius: "1rem",
+              fontWeight: "700",
+              fontSize: "1.1rem",
+              transition: "all 0.3s ease",
+              marginTop: "1rem",
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.background = "var(--primary-opacity-500)";
+              e.target.style.transform = "translateY(-2px)";
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.background = "var(--primary)";
+              e.target.style.transform = "translateY(0)";
+            }}
+          >
+            <i
+              className="ri-service-line"
+              style={{
+                color: "var(--bg)",
+              }}
+            ></i>
+            Ver todos los servicios de desarrollo web
+          </motion.a>
+          <motion.p
+            variants={sectionAnimation}
+            initial={{ opacity: 0, y: 50 }}
+            animate={animationStarted ? { opacity: 1, y: 0 } : { opacity: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+          >
+            El siguiente formulario es de contacto directo:
+          </motion.p>
         </motion.section>
 
         <motion.section

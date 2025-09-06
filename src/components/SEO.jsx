@@ -29,6 +29,10 @@ const SEO = ({
 
       {/* Canonical */}
       <link rel="canonical" href={url} />
+      
+      {/* Preconnect to services subdomain */}
+      <link rel="preconnect" href="https://services.criskop.com" />
+      <link rel="dns-prefetch" href="https://services.criskop.com" />
     </Helmet>
   );
 };
